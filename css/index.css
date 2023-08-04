@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700&display=swap");
+html {
+  font-size: 1rem;
+  font-family: "Inter", "Segoe UI", Tahoma, Verdana, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #001855;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #ffffff;
+  min-height: 1000px;
+}
+
+a,
+button,
+input,
+textarea {
+  font-family: "FreeSet", "Segoe UI", Tahoma, Verdana, sans-serif;
+}
+
+figure {
+  margin: 0;
+}
+
+.logo__link {
+  display: inline-block;
+  padding: 6px 0 6px 39px;
+  color: #001855;
+  font-family: "Montserrat", "Inter", "Segoe UI", Tahoma, Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  text-decoration: none;
+  background: url("../assets/logo.svg") left center no-repeat;
+}
+.logo__link:hover {
+  color: #001855;
+}
+
+.header {
+  padding: 20px 0;
+}
+.header .col-12 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 768px) {
+  .header .col-12 {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+.header .nav-link {
+  padding: 10px 24px;
+  color: #506392;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+}
+.header .nav-link.active {
+  color: #001855;
+  font-weight: 700;
+}
+.header .logo {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 280px;
+          flex: 0 1 280px;
+}
+@media (max-width: 768px) {
+  .header .logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+  }
+}
+.header__nav {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+@media (max-width: 992px) {
+  .header__nav {
+    padding: 10px 12px;
+  }
+}
+@media (max-width: 768px) {
+  .header__nav {
+    display: none;
+  }
+}
+.header__auth {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+@media (max-width: 576px) {
+  .header__auth {
+    display: none;
+  }
+}
+.header__auth-link.nav-link {
+  padding: 10px 16px;
+}
+@media (max-width: 992px) {
+  .header__auth-link.nav-link {
+    padding: 10px 12px;
+  }
+}
+.header__auth-sign-up.nav-link {
+  color: #326bff;
+  font-weight: 700;
+}
+
+.main {
+  padding: 24px 0 96px;
+  margin: 0 auto;
+  width: 1408px;
+  border-radius: 12px;
+  background-color: #f5f8ff;
+}

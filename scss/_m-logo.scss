@@ -1,0 +1,17 @@
+.logo {
+  &__link {
+    display: inline-block;
+    padding: 6px 0 6px 39px;
+    color: $blue900;
+    font-family: 'Montserrat', 'Inter', 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    text-decoration: none;
+    background: url('../assets/logo.svg') left center no-repeat;
+
+    &:hover {
+      color: $blue900;
+    }
+  }
+}
