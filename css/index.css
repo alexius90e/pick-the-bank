@@ -40,6 +40,70 @@ figure {
   color: #001855;
 }
 
+.btn {
+  border-radius: 32px;
+}
+.btn .btn-primary {
+  color: #ffffff;
+  background-color: #326bff;
+  border-color: #326bff;
+}
+
+.quick-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 15px;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.quick-search__tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+.quick-search__title {
+  margin: 0;
+  color: #506392;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 16px;
+}
+.quick-search__tag {
+  padding: 4px 12px;
+  border-radius: 32px;
+  color: #506392;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 12px;
+  background: #f5f6fa;
+}
+.quick-search__reset {
+  padding: 0;
+  padding-right: 16px;
+  color: #506392;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.1px;
+  border: none;
+  background: url(../assets/close-icon.svg) right center no-repeat;
+}
+
 .header {
   padding: 20px 0;
 }
@@ -130,7 +194,46 @@ figure {
 .main {
   padding: 24px 0 96px;
   margin: 0 auto;
-  width: 1408px;
+  max-width: 1408px;
   border-radius: 12px;
   background-color: #f5f8ff;
+}
+
+.search {
+  padding: 24px 0;
+}
+.search__bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  max-width: 1140px;
+  margin: 0 auto 8px;
+  padding: 10px;
+  padding-left: 55px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #e4e7f0;
+  border-radius: 32px;
+  background: url(../assets/search-icon.svg) no-repeat;
+  background-position: left 15px center;
+}
+.search__bar .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 13px 24px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.1px;
 }

@@ -1,0 +1,9 @@
+.btn {
+  border-radius: 32px;
+
+  .btn-primary {
+    color: $white;
+    background-color: $blue500;
+    border-color: $blue500;
+  }
+}
