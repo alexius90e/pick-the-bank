@@ -1,13 +1,35 @@
 .protected {
+  position: relative;
   margin: 0 0 26px;
-  padding: 20px 24px;
-  padding-left: 80px;
+  padding: 20px 80px;
   border-radius: 12px;
   background-color: $white;
   background-image: url(../assets/shield-icon.svg);
   background-repeat: no-repeat;
   background-position: left 24px center;
   box-shadow: 0px 4px 12px 0px rgba(0, 0, 102, 0.05);
+
+  @include laptop {
+    padding: 16px 80px;
+  }
+
+  @include tablet {
+    margin: 0 0 32px;
+  }
+
+  @include mobile {
+    margin: 0 0 26px;
+    padding: 16px;
+    padding-left: 60px;
+    background-size: 38px;
+    background-position: left 16px top 16px;
+  }
+
+  @media (max-width: 400px) {
+    padding-left: 44px;
+    background-size: 24px;
+    background-position: left 16px top 16px;
+  }
 
   &__title {
     margin: 0;
@@ -25,5 +47,41 @@
     font-weight: 500;
     line-height: 18px;
     letter-spacing: 0.5px;
+  }
+
+  &__button {
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: none;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    @include mobile {
+      display: none;
+    }
+  
+
+
+    &:before {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 100%;
+      background: url(../assets/icons/arrow-right-icon.svg) center no-repeat;
+      transition: $baseTransition;
+    }
+
+    &:active {
+      &::before {
+        transform: scale(0.9);
+      }
+    }
   }
 }

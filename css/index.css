@@ -396,9 +396,9 @@ figure {
 }
 
 .protected {
+  position: relative;
   margin: 0 0 26px;
-  padding: 20px 24px;
-  padding-left: 80px;
+  padding: 20px 80px;
   border-radius: 12px;
   background-color: #ffffff;
   background-image: url(../assets/shield-icon.svg);
@@ -406,6 +406,32 @@ figure {
   background-position: left 24px center;
   -webkit-box-shadow: 0px 4px 12px 0px rgba(0, 0, 102, 0.05);
           box-shadow: 0px 4px 12px 0px rgba(0, 0, 102, 0.05);
+}
+@media (max-width: 992px) {
+  .protected {
+    padding: 16px 80px;
+  }
+}
+@media (max-width: 768px) {
+  .protected {
+    margin: 0 0 32px;
+  }
+}
+@media (max-width: 576px) {
+  .protected {
+    margin: 0 0 26px;
+    padding: 16px;
+    padding-left: 60px;
+    background-size: 38px;
+    background-position: left 16px top 16px;
+  }
+}
+@media (max-width: 400px) {
+  .protected {
+    padding-left: 44px;
+    background-size: 24px;
+    background-position: left 16px top 16px;
+  }
 }
 .protected__title {
   margin: 0;
@@ -423,7 +449,51 @@ figure {
   line-height: 18px;
   letter-spacing: 0.5px;
 }
+.protected__button {
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  height: 32px;
+  width: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  background: none;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+}
+@media (max-width: 576px) {
+  .protected__button {
+    display: none;
+  }
+}
+.protected__button:before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: url(../assets/icons/arrow-right-icon.svg) center no-repeat;
+  -webkit-transition: all ease-in-out 0.15s;
+  transition: all ease-in-out 0.15s;
+}
+.protected__button:active::before {
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
+}
 
+.deposits {
+  display: none;
+}
 .deposits__title {
   color: #001855;
   margin: 0 0 4px;
