@@ -396,7 +396,7 @@ figure {
 }
 
 .protected {
-  margin: 0 0 24px;
+  margin: 0 0 26px;
   padding: 20px 24px;
   padding-left: 80px;
   border-radius: 12px;
@@ -412,8 +412,8 @@ figure {
   color: #001855;
   font-size: 15px;
   font-weight: 700;
-  line-height: 20px;
-  letter-spacing: 0.2px;
+  line-height: 23px;
+  letter-spacing: 0.45px;
 }
 .protected__description {
   margin: 0;
@@ -421,22 +421,23 @@ figure {
   font-size: 13px;
   font-weight: 500;
   line-height: 18px;
-  letter-spacing: 0.1px;
+  letter-spacing: 0.5px;
 }
 
 .deposits__title {
   color: #001855;
-  margin: 0;
+  margin: 0 0 4px;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
+  letter-spacing: 0.3px;
 }
 .deposits__description {
-  margin: 0 0 24px;
+  margin: 0 0 36px;
   color: #506392;
   font-size: 15px;
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.6px;
 }

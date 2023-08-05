@@ -1,5 +1,5 @@
 .protected {
-  margin: 0 0 24px;
+  margin: 0 0 26px;
   padding: 20px 24px;
   padding-left: 80px;
   border-radius: 12px;
@@ -14,8 +14,8 @@
     color: $blue900;
     font-size: 15px;
     font-weight: 700;
-    line-height: 20px;
-    letter-spacing: 0.2px;
+    line-height: 23px;
+    letter-spacing: 0.45px;
   }
 
   &__description {
@@ -24,6 +24,6 @@
     font-size: 13px;
     font-weight: 500;
     line-height: 18px;
-    letter-spacing: 0.1px;
+    letter-spacing: 0.5px;
   }
 }
