@@ -9,12 +9,70 @@
     display: flex;
     align-items: flex-start;
     gap: 24px;
+
+    @include laptop {
+      gap: 16px;
+    }
   }
 
   &__bank {
-    flex: 0 0 360px;
+    flex: 0 1 336px;
     display: flex;
     gap: 12px;
+
+    @include laptop {
+      flex: 0 1 296px;
+    }
+
+    @include tablet {
+      flex: 1 1 276px;
+      gap: 8px;
+    }
+
+    @include mobile {
+      flex: 1 1 197px;
+      gap: 6px;
+    }
+
+    @include mobilesm {
+      flex: 1 1 auto;
+      gap: 6px;
+    }
+
+    &-logo {
+      flex: 0 0 64px;
+      width: 64px;
+      height: 64px;
+
+      @include laptop {
+        flex: 0 0 56px;
+        width: 56px;
+        height: 56px;
+      }
+
+      @include tablet {
+        flex: 0 0 40px;
+        width: 40px;
+        height: 40px;
+      }
+
+      @include mobile {
+        flex: 0 0 38px;
+        width: 38px;
+        height: 38px;
+      }
+
+      @include mobilesm {
+        flex: 0 0 24px;
+        width: 24px;
+        height: 24px;
+      }
+
+      & img {
+        width: 100%;
+        height: auto;
+      }
+    }
 
     &-name {
       color: $blue900;
@@ -23,6 +81,17 @@
       font-weight: 600;
       line-height: 24px;
       letter-spacing: 0.1px;
+
+      @include laptop {
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 20px;
+      }
+
+      @include mobile {
+        gap: 6px;
+        word-break: break-word;
+      }
     }
 
     &-country {
@@ -36,9 +105,25 @@
   }
 
   &__details {
-    flex: 1 0 auto;
+    flex: 1 1 auto;
     display: flex;
     gap: 24px;
+
+    @include laptop {
+      gap: 16px;
+    }
+
+    @include tablet {
+      flex: 1 0 auto;
+    }
+
+    @include mobile {
+      flex: 1 0 88px;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0;
+      min-width: 88px;
+    }
 
     &-rate {
       flex: 1 0 30%;
@@ -46,6 +131,16 @@
       font-style: normal;
       font-weight: 600;
       line-height: 40px;
+
+      @include laptop {
+        font-size: 24px;
+        line-height: 28px;
+      }
+
+      @include mobile {
+        font-size: 15px;
+        line-height: 20px;
+      }
     }
 
     &-term,
@@ -56,6 +151,12 @@
       font-weight: 500;
       line-height: 20px;
       letter-spacing: 0.2px;
+
+      @include mobile {
+        color: $grey600;
+        font-size: 13px;
+        line-height: 18px;
+      }
     }
   }
 
@@ -63,17 +164,29 @@
     flex: 0 0 208px;
     display: flex;
     gap: 16px;
+
+    @include laptop {
+      flex: 0 0 166px;
+    }
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__button {
     &-primary {
-      flex: 0 0 160px;
-      padding: 18px 0;
+      flex: 1 0 auto;
+      padding: 18px 35px;
       font-size: 15px;
       font-style: normal;
       font-weight: 700;
       line-height: 20px;
       letter-spacing: 0.2px;
+
+      @include laptop {
+        padding: 13px 24px;
+      }
     }
 
     &-favorites {
@@ -104,15 +217,33 @@
     line-height: 18px;
     letter-spacing: 0.1px;
     border-radius: 100px;
-    background-color: $blue500;
 
-    &_secondary {
+    @include mobile {
+      padding: 2px 8px;
+      font-size: 11px;
+      line-height: 16px;
+    }
+
+    &_online {
+      background-color: $blue500;
+    }
+
+    &_protected {
       background-color: $cyan500;
+    }
+
+    &_subordinated {
+      color: $red500;
+      background-color: $red150;
     }
   }
 
   &__more-details {
     margin-top: 13px;
+
+    @include tablet {
+      display: none;
+    }
 
     &-button {
       padding: 0;
@@ -121,7 +252,7 @@
       font-size: 13px;
       font-style: normal;
       font-weight: 500;
-      line-height: 18px; 
+      line-height: 18px;
       letter-spacing: 0.1px;
       border: none;
       background: url(../assets/dropdown-blue-icon.svg) no-repeat right center;
