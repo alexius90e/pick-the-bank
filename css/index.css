@@ -56,6 +56,11 @@ figure {
   border-radius: 12px;
   background-color: #ffffff;
 }
+@media (max-width: 576px) {
+  .deposit-card {
+    padding: 20px 16px 16px;
+  }
+}
 .deposit-card__info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -65,14 +70,97 @@ figure {
           align-items: flex-start;
   gap: 24px;
 }
+@media (max-width: 992px) {
+  .deposit-card__info {
+    gap: 16px;
+  }
+}
 .deposit-card__bank {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 360px;
-          flex: 0 0 360px;
+      -ms-flex: 0 1 336px;
+          flex: 0 1 336px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 12px;
+}
+@media (max-width: 992px) {
+  .deposit-card__bank {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 296px;
+            flex: 0 1 296px;
+  }
+}
+@media (max-width: 768px) {
+  .deposit-card__bank {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 276px;
+            flex: 1 1 276px;
+    gap: 8px;
+  }
+}
+@media (max-width: 576px) {
+  .deposit-card__bank {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 197px;
+            flex: 1 1 197px;
+    gap: 6px;
+  }
+}
+@media (max-width: 400px) {
+  .deposit-card__bank {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    gap: 6px;
+  }
+}
+.deposit-card__bank-logo {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 64px;
+          flex: 0 0 64px;
+  width: 64px;
+  height: 64px;
+}
+@media (max-width: 992px) {
+  .deposit-card__bank-logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 56px;
+            flex: 0 0 56px;
+    width: 56px;
+    height: 56px;
+  }
+}
+@media (max-width: 768px) {
+  .deposit-card__bank-logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 40px;
+            flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 576px) {
+  .deposit-card__bank-logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 38px;
+            flex: 0 0 38px;
+    width: 38px;
+    height: 38px;
+  }
+}
+@media (max-width: 400px) {
+  .deposit-card__bank-logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 24px;
+            flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+  }
+}
+.deposit-card__bank-logo img {
+  width: 100%;
+  height: auto;
 }
 .deposit-card__bank-name {
   color: #001855;
@@ -81,6 +169,19 @@ figure {
   font-weight: 600;
   line-height: 24px;
   letter-spacing: 0.1px;
+}
+@media (max-width: 992px) {
+  .deposit-card__bank-name {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .deposit-card__bank-name {
+    gap: 6px;
+    word-break: break-word;
+  }
 }
 .deposit-card__bank-country {
   color: #7f8daf;
@@ -92,12 +193,40 @@ figure {
 }
 .deposit-card__details {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 24px;
+}
+@media (max-width: 992px) {
+  .deposit-card__details {
+    gap: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .deposit-card__details {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+  }
+}
+@media (max-width: 576px) {
+  .deposit-card__details {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 88px;
+            flex: 1 0 88px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    gap: 0;
+    min-width: 88px;
+  }
 }
 .deposit-card__details-rate {
   -webkit-box-flex: 1;
@@ -107,6 +236,18 @@ figure {
   font-style: normal;
   font-weight: 600;
   line-height: 40px;
+}
+@media (max-width: 992px) {
+  .deposit-card__details-rate {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 576px) {
+  .deposit-card__details-rate {
+    font-size: 15px;
+    line-height: 20px;
+  }
 }
 .deposit-card__details-term, .deposit-card__details-amount {
   -webkit-box-flex: 1;
@@ -118,6 +259,13 @@ figure {
   line-height: 20px;
   letter-spacing: 0.2px;
 }
+@media (max-width: 576px) {
+  .deposit-card__details-term, .deposit-card__details-amount {
+    color: #7f8daf;
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
 .deposit-card__buttons {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 208px;
@@ -127,16 +275,33 @@ figure {
   display: flex;
   gap: 16px;
 }
+@media (max-width: 992px) {
+  .deposit-card__buttons {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 166px;
+            flex: 0 0 166px;
+  }
+}
+@media (max-width: 768px) {
+  .deposit-card__buttons {
+    display: none;
+  }
+}
 .deposit-card__button-primary {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 160px;
-          flex: 0 0 160px;
-  padding: 18px 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  padding: 18px 35px;
   font-size: 15px;
   font-style: normal;
   font-weight: 700;
   line-height: 20px;
   letter-spacing: 0.2px;
+}
+@media (max-width: 992px) {
+  .deposit-card__button-primary {
+    padding: 13px 24px;
+  }
 }
 .deposit-card__button-favorites {
   -webkit-box-flex: 0;
@@ -169,13 +334,31 @@ figure {
   line-height: 18px;
   letter-spacing: 0.1px;
   border-radius: 100px;
+}
+@media (max-width: 576px) {
+  .deposit-card__tag {
+    padding: 2px 8px;
+    font-size: 11px;
+    line-height: 16px;
+  }
+}
+.deposit-card__tag_online {
   background-color: #326bff;
 }
-.deposit-card__tag_secondary {
+.deposit-card__tag_protected {
   background-color: #3bf;
+}
+.deposit-card__tag_subordinated {
+  color: #FF5732;
+  background-color: #FFDDD6;
 }
 .deposit-card__more-details {
   margin-top: 13px;
+}
+@media (max-width: 768px) {
+  .deposit-card__more-details {
+    display: none;
+  }
 }
 .deposit-card__more-details-button {
   padding: 0;
@@ -396,9 +579,9 @@ figure {
 }
 
 .protected {
-  margin: 0 0 24px;
-  padding: 20px 24px;
-  padding-left: 80px;
+  position: relative;
+  margin: 0 0 26px;
+  padding: 20px 80px;
   border-radius: 12px;
   background-color: #ffffff;
   background-image: url(../assets/shield-icon.svg);
@@ -407,13 +590,39 @@ figure {
   -webkit-box-shadow: 0px 4px 12px 0px rgba(0, 0, 102, 0.05);
           box-shadow: 0px 4px 12px 0px rgba(0, 0, 102, 0.05);
 }
+@media (max-width: 992px) {
+  .protected {
+    padding: 16px 80px;
+  }
+}
+@media (max-width: 768px) {
+  .protected {
+    margin: 0 0 32px;
+  }
+}
+@media (max-width: 576px) {
+  .protected {
+    margin: 0 0 26px;
+    padding: 16px;
+    padding-left: 60px;
+    background-size: 38px;
+    background-position: left 16px top 16px;
+  }
+}
+@media (max-width: 400px) {
+  .protected {
+    padding-left: 44px;
+    background-size: 24px;
+    background-position: left 16px top 16px;
+  }
+}
 .protected__title {
   margin: 0;
   color: #001855;
   font-size: 15px;
   font-weight: 700;
-  line-height: 20px;
-  letter-spacing: 0.2px;
+  line-height: 23px;
+  letter-spacing: 0.45px;
 }
 .protected__description {
   margin: 0;
@@ -421,22 +630,64 @@ figure {
   font-size: 13px;
   font-weight: 500;
   line-height: 18px;
-  letter-spacing: 0.1px;
+  letter-spacing: 0.5px;
+}
+.protected__button {
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  height: 32px;
+  width: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  background: none;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+}
+@media (max-width: 576px) {
+  .protected__button {
+    display: none;
+  }
+}
+.protected__button:before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: url(../assets/icons/arrow-right-icon.svg) center no-repeat;
+  -webkit-transition: all ease-in-out 0.15s;
+  transition: all ease-in-out 0.15s;
+}
+.protected__button:active::before {
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 .deposits__title {
   color: #001855;
-  margin: 0;
+  margin: 0 0 4px;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
+  letter-spacing: 0.3px;
 }
 .deposits__description {
-  margin: 0 0 24px;
+  margin: 0 0 36px;
   color: #506392;
   font-size: 15px;
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.6px;
 }
