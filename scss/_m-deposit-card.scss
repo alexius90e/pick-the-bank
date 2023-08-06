@@ -29,7 +29,7 @@
     }
 
     @include tablet {
-      flex: 1 1 276px;
+      flex: 0 1 276px;
       gap: 8px;
     }
 
@@ -160,6 +160,12 @@
         color: $grey600;
         font-size: 13px;
         line-height: 18px;
+      }
+    }
+
+    &-amount {
+      @include mobile {
+        display: none;
       }
     }
   }

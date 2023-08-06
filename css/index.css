@@ -93,9 +93,9 @@ figure {
 }
 @media (max-width: 768px) {
   .deposit-card__bank {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 276px;
-            flex: 1 1 276px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 276px;
+            flex: 0 1 276px;
     gap: 8px;
   }
 }
@@ -264,6 +264,11 @@ figure {
     color: #7f8daf;
     font-size: 13px;
     line-height: 18px;
+  }
+}
+@media (max-width: 576px) {
+  .deposit-card__details-amount {
+    display: none;
   }
 }
 .deposit-card__buttons {
@@ -485,7 +490,17 @@ figure {
 }
 
 .search {
-  padding: 24px 0;
+  padding: 24px 37px;
+}
+@media (max-width: 768px) {
+  .search {
+    padding: 24px 34px;
+  }
+}
+@media (max-width: 576px) {
+  .search {
+    padding: 24px 20px;
+  }
 }
 .search__bar {
   display: -webkit-box;
@@ -534,6 +549,11 @@ figure {
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 15px;
+}
+@media (max-width: 768px) {
+  .quick-search {
+    display: none;
+  }
 }
 .quick-search__tags {
   display: -webkit-box;

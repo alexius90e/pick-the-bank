@@ -6,6 +6,10 @@
   margin: 0 auto;
   padding: 0 15px;
 
+  @include tablet {
+    display: none;
+  }
+
   &__tags {
     display: flex;
     flex-wrap: wrap;
