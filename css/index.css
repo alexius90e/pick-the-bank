@@ -56,6 +56,11 @@ figure {
   border-radius: 12px;
   background-color: #ffffff;
 }
+@media (max-width: 576px) {
+  .deposit-card {
+    padding: 20px 16px 16px;
+  }
+}
 .deposit-card__info {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -5,6 +5,10 @@
   border-radius: 12px;
   background-color: $white;
 
+  @include mobile {
+    padding: 20px 16px 16px;
+  }
+
   &__info {
     display: flex;
     align-items: flex-start;
