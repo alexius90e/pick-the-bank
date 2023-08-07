@@ -26,18 +26,31 @@ figure {
 }
 
 .logo__link {
+  position: relative;
+  min-height: 100%;
   display: inline-block;
-  padding: 6px 0 6px 39px;
+  padding-left: 39px;
   color: #001855;
-  font-family: "Montserrat", "Inter", "Segoe UI", Tahoma, Verdana, sans-serif;
+  font-family: "Montserrat", "Inter", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 20px;
   text-decoration: none;
-  background: url("../assets/logo.svg") left center no-repeat;
 }
 .logo__link:hover {
   color: #001855;
+}
+.logo__link::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  background: url("../assets/logo.svg") left center no-repeat;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .btn {
@@ -388,24 +401,80 @@ figure {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+@media (max-width: 992px) {
+  .header .col-12 {
+    gap: 16px;
+    padding: 0 36px;
+  }
 }
 @media (max-width: 768px) {
   .header .col-12 {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    padding: 0 36px;
   }
 }
-.header .nav-link {
-  padding: 10px 24px;
+@media (max-width: 576px) {
+  .header .col-12 {
+    padding: 0 20px;
+  }
+}
+.header__burger {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  display: none;
+  height: 19px;
+  width: 21px;
+  border: none;
+  background: url(../assets/burger-icon.svg) center no-repeat;
+}
+@media (max-width: 768px) {
+  .header__burger {
+    display: inline-block;
+  }
+}
+.header__nav {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px 48px;
+  min-height: 40px;
+}
+@media (max-width: 992px) {
+  .header__nav {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    gap: 10px 24px;
+    padding-left: 32px;
+  }
+}
+@media (max-width: 768px) {
+  .header__nav {
+    display: none;
+  }
+}
+.header__nav-link {
   color: #506392;
   font-size: 15px;
-  font-style: normal;
   font-weight: 500;
   line-height: 20px;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.7px;
+  text-decoration: none;
+  word-wrap: normal;
 }
-.header .nav-link.active {
+.header__nav-link.active {
   color: #001855;
   font-weight: 700;
 }
@@ -414,26 +483,18 @@ figure {
       -ms-flex: 0 1 280px;
           flex: 0 1 280px;
 }
+@media (max-width: 992px) {
+  .header .logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 177px;
+            flex: 0 1 177px;
+  }
+}
 @media (max-width: 768px) {
   .header .logo {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
-  }
-}
-.header__nav {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
-}
-@media (max-width: 992px) {
-  .header__nav {
-    padding: 10px 12px;
-  }
-}
-@media (max-width: 768px) {
-  .header__nav {
-    display: none;
   }
 }
 .header__auth {
@@ -446,21 +507,31 @@ figure {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  gap: 24px;
+}
+@media (max-width: 768px) {
+  .header__auth {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+  }
 }
 @media (max-width: 576px) {
   .header__auth {
     display: none;
   }
 }
-.header__auth-link.nav-link {
-  padding: 10px 16px;
+.header__auth-link {
+  display: inline-block;
+  padding: 10px 0;
+  color: #506392;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.7px;
+  text-decoration: none;
 }
-@media (max-width: 992px) {
-  .header__auth-link.nav-link {
-    padding: 10px 12px;
-  }
-}
-.header__auth-sign-up.nav-link {
+.header__auth-sign-up {
   color: #326bff;
   font-weight: 700;
 }
@@ -550,7 +621,7 @@ figure {
   margin: 0 auto;
   padding: 0 15px;
 }
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .quick-search {
     display: none;
   }

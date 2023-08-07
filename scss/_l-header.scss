@@ -4,21 +4,63 @@
   .col-12 {
     display: flex;
     align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 60px;
+
+    @include laptop {
+      gap: 16px;
+      padding: 0 36px;
+    }
 
     @include tablet {
-      justify-content: space-between;
+      padding: 0 36px;
+    }
+
+    @include mobile {
+      padding: 0 20px;
     }
   }
 
-  & .nav {
+  &__burger {
+    flex: 0 0 auto;
+    display: none;
+    height: 19px;
+    width: 21px;
+    border: none;
+    background:  url(../assets/burger-icon.svg) center no-repeat;
+
+    @include tablet {
+      display: inline-block;
+    }
+  }
+
+  &__nav {
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 48px;
+    min-height: 40px;
+
+    @include laptop {
+      flex: 1 1 auto;
+      gap: 10px 24px;
+      padding-left: 32px;
+    }
+
+    @include tablet {
+      display: none;
+    }
+
     &-link {
-      padding: 10px 24px;
       color: $grey800;
       font-size: 15px;
-      font-style: normal;
       font-weight: 500;
       line-height: 20px;
-      letter-spacing: 0.2px;
+      letter-spacing: 0.7px;
+      text-decoration: none;
+      word-wrap: normal;
 
       &.active {
         color: $blue900;
@@ -30,20 +72,12 @@
   & .logo {
     flex: 0 1 280px;
 
+    @include laptop {
+      flex: 0 1 177px;
+    }
+
     @include tablet {
       flex: 0 0 auto;
-    }
-  }
-
-  &__nav {
-    flex: 1 0 auto;
-
-    @include laptop {
-      padding: 10px 12px;
-    }
-
-    @include tablet {
-      display: none;
     }
   }
 
@@ -51,20 +85,30 @@
     flex: 0 0 auto;
     display: flex;
     justify-content: flex-end;
+    gap: 24px;
+
+    @include tablet {
+      flex: 1 0 auto;
+    }
+
 
     @include mobile {
       display: none;
     }
 
-    &-link.nav-link {
-      padding: 10px 16px;
+    &-link {
+      display: inline-block;
+      padding: 10px 0;
+      color: $grey800;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: 0.7px;
+      text-decoration: none;
 
-      @include laptop {
-        padding: 10px 12px;
-      }
     }
 
-    &-sign-up.nav-link {
+    &-sign-up {
       color: $blue500;
       font-weight: 700;
     }
