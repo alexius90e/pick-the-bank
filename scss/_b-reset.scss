@@ -12,6 +12,7 @@ html {
 body {
   position: relative;
   margin: 0;
+  font-family: 'Inter', sans-serif;
   background-color: $white;
   min-height: 1000px;
 }
@@ -20,7 +21,7 @@ a,
 button,
 input,
 textarea {
-  font-family: 'FreeSet', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 figure {

@@ -11,6 +11,7 @@ html {
 body {
   position: relative;
   margin: 0;
+  font-family: "Inter", sans-serif;
   background-color: #ffffff;
   min-height: 1000px;
 }
@@ -19,7 +20,7 @@ a,
 button,
 input,
 textarea {
-  font-family: "FreeSet", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 figure {
@@ -561,6 +562,167 @@ figure {
   max-width: 1140px;
 }
 
+.footer {
+  padding: 64px 0 0;
+}
+.footer .container-fluid {
+  position: relative;
+  max-width: 1140px;
+  padding: 0 20px;
+}
+@media (max-width: 576px) {
+  .footer .container-fluid {
+    padding-top: 68px;
+  }
+}
+.footer__logo {
+  margin-bottom: 52px;
+}
+@media (max-width: 576px) {
+  .footer__logo {
+    margin-bottom: 0;
+    position: absolute;
+    top: 0;
+    left: 20px;
+  }
+}
+.footer__contacts {
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+  margin-bottom: 52px;
+}
+@media (max-width: 576px) {
+  .footer__contacts {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-bottom: 0;
+  }
+}
+.footer__contacts-link {
+  display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-bottom: 16px;
+  padding-left: 32px;
+  color: #506392;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  text-decoration: none;
+  background-position: left center;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+}
+.footer__contacts-link_phone {
+  background-image: url(../assets/icons/phone-icon.svg);
+}
+.footer__contacts-link_email {
+  background-image: url(../assets/icons/email-icon.svg);
+}
+.footer__address {
+  max-width: 268px;
+  padding-left: 32px;
+  color: #aeb7cd;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+.footer__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 36px;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+@media (max-width: 768px) {
+  .footer__navigation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+@media (max-width: 576px) {
+  .footer__navigation {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+}
+.footer__nav {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 30%;
+          flex: 1 1 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+@media (max-width: 768px) {
+  .footer__nav {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+  }
+}
+.footer__nav-title {
+  margin: 0;
+  color: #001855;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+}
+.footer__nav-link {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  color: #506392;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  text-decoration: none;
+}
+.footer__copyrights {
+  -webkit-box-ordinal-group: 11;
+      -ms-flex-order: 10;
+          order: 10;
+  margin-top: 64px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: #aeb7cd;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  border-top: 1px solid #e4e7f0;
+}
+@media (max-width: 576px) {
+  .footer__copyrights {
+    margin-top: 52px;
+  }
+}
+
 .search {
   padding: 24px 37px;
 }
@@ -897,6 +1059,10 @@ figure {
   line-height: 20px;
   letter-spacing: 0.6px;
 }
+.deposits__description img {
+  width: 20px;
+  height: auto;
+}
 .deposits__buttons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1174,6 +1340,10 @@ figure {
   margin: 0 0 16px;
   padding: 18px 20px;
   text-align: center;
+}
+.subscription__image {
+  width: 88px;
+  height: auto;
 }
 .subscription__title {
   max-width: 600px;
