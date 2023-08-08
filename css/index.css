@@ -724,16 +724,22 @@ figure {
 }
 
 .search {
-  padding: 24px 37px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 8px 37px;
+  background-color: #ffffff;
 }
 @media (max-width: 768px) {
   .search {
-    padding: 24px 34px;
+    padding: 8px 34px;
   }
 }
 @media (max-width: 576px) {
   .search {
-    padding: 24px 20px;
+    padding: 8px 20px;
   }
 }
 .search__bar {
@@ -742,7 +748,7 @@ figure {
   display: flex;
   gap: 8px;
   max-width: 1140px;
-  margin: 0 auto 8px;
+  margin: 0 auto;
   padding: 10px;
   padding-left: 55px;
   -webkit-box-sizing: border-box;
@@ -797,35 +803,6 @@ figure {
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
-}
-.search__bar-select .form-select {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  width: auto;
-  padding: 2px 4px;
-  padding-right: 24px;
-  color: #001855;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 20px;
-  border: none;
-  background-color: inherit;
-  background-position: right 4px center;
-  min-width: auto;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-@media (max-width: 576px) {
-  .search__bar-select .form-select {
-    background: none;
-  }
-}
-.search__bar-select .form-select:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
 }
 .search__bar-label {
   color: #506392;
@@ -885,8 +862,153 @@ figure {
     display: none;
   }
 }
+.search__select .form-select {
+  width: 100%;
+  padding: 2px 4px;
+  padding-right: 24px;
+  color: #001855;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  border: none;
+  background-color: inherit;
+  background-position: right 4px center;
+  min-width: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (max-width: 576px) {
+  .search__select .form-select {
+    background: none;
+  }
+}
+.search__select .form-select:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.search__select-residency {
+  position: relative;
+  padding-left: 26px;
+}
+.search__select-residency:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.search__select-residency[data-residency=at]::before {
+  background-image: url(../assets/countries/austria.svg);
+}
+.search__select-residency[data-residency=be]::before {
+  background-image: url(../assets/countries/belgium.svg);
+}
+.search__select-residency[data-residency=gb]::before {
+  background-image: url(../assets/countries/britain.svg);
+}
+.search__select-residency[data-residency=bg]::before {
+  background-image: url(../assets/countries/bulgaria.svg);
+}
+.search__select-residency[data-residency=hr]::before {
+  background-image: url(../assets/countries/croatia.svg);
+}
+.search__select-residency[data-residency=cy]::before {
+  background-image: url(../assets/countries/cyprus.svg);
+}
+.search__select-residency[data-residency=cz]::before {
+  background-image: url(../assets/countries/czech.svg);
+}
+.search__select-residency[data-residency=dk]::before {
+  background-image: url(../assets/countries/denmark.svg);
+}
+.search__select-residency[data-residency=ee]::before {
+  background-image: url(../assets/countries/estonia.svg);
+}
+.search__select-residency[data-residency=fl]::before {
+  background-image: url(../assets/countries/finland.svg);
+}
+.search__select-residency[data-residency=fr]::before {
+  background-image: url(../assets/countries/france.svg);
+}
+.search__select-residency[data-residency=de]::before {
+  background-image: url(../assets/countries/germany.svg);
+}
+.search__select-residency[data-residency=gr]::before {
+  background-image: url(../assets/countries/greece.svg);
+}
+.search__select-residency[data-residency=hu]::before {
+  background-image: url(../assets/countries/hungary.svg);
+}
+.search__select-residency[data-residency=ie]::before {
+  background-image: url(../assets/countries/ireland.svg);
+}
+.search__select-residency[data-residency=it]::before {
+  background-image: url(../assets/countries/italy.svg);
+}
+.search__select-residency[data-residency=lv]::before {
+  background-image: url(../assets/countries/latvia.svg);
+}
+.search__select-residency[data-residency=lt]::before {
+  background-image: url(../assets/countries/lithuania.svg);
+}
+.search__select-residency[data-residency=lu]::before {
+  background-image: url(../assets/countries/luxembourg.svg);
+}
+.search__select-residency[data-residency=mt]::before {
+  background-image: url(../assets/countries/malta.svg);
+}
+.search__select-residency[data-residency=nl]::before {
+  background-image: url(../assets/countries/netherlands.svg);
+}
+.search__select-residency[data-residency=pl]::before {
+  background-image: url(../assets/countries/poland.svg);
+}
+.search__select-residency[data-residency=pt]::before {
+  background-image: url(../assets/countries/portugal.svg);
+}
+.search__select-residency[data-residency=ro]::before {
+  background-image: url(../assets/countries/romania.svg);
+}
+.search__select-residency[data-residency=sk]::before {
+  background-image: url(../assets/countries/slovakia.svg);
+}
+.search__select-residency[data-residency=sl]::before {
+  background-image: url(../assets/countries/slovenia.svg);
+}
+.search__select-residency[data-residency=es]::before {
+  background-image: url(../assets/countries/spain.svg);
+}
+.search__select-residency[data-residency=se]::before {
+  background-image: url(../assets/countries/sweden.svg);
+}
+.search__select-residency[data-residency=ch]::before {
+  background-image: url(../assets/countries/switzerland.svg);
+}
 
 .quick-search {
+  padding: 0 37px;
+  margin-bottom: 24px;
+}
+@media (max-width: 768px) {
+  .quick-search {
+    padding: 0 34px;
+  }
+}
+@media (max-width: 576px) {
+  .quick-search {
+    display: none;
+  }
+}
+.quick-search .col-12 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -897,11 +1019,6 @@ figure {
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 15px;
-}
-@media (max-width: 576px) {
-  .quick-search {
-    display: none;
-  }
 }
 .quick-search__tags {
   display: -webkit-box;
