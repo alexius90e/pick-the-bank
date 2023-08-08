@@ -16,21 +16,23 @@
   </head>
   <body>
     <header class="header">
-      <div class="container-xxl">
+      <div class="container-fluid">
         <div class="row">
           <div class="col-12">
+            <button class="header__burger"></button>
+
             <div class="logo"><a class="logo__link" href="./">PickTheBank</a></div>
 
-            <nav class="nav header__nav">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-              <a class="nav-link" href="#">All deposits</a>
-              <a class="nav-link" href="#">Favourites</a>
-              <a class="nav-link" href="#">Blog</a>
+            <nav class="header__nav">
+              <a class="header__nav-link active" aria-current="page" href="#">Home</a>
+              <a class="header__nav-link" href="#">All deposits</a>
+              <a class="header__nav-link" href="#">Favourites</a>
+              <a class="header__nav-link" href="#">Blog</a>
             </nav>
 
-            <nav class="nav header__auth">
-              <a class="nav-link header__auth-link" href="#">Log In</a>
-              <a class="nav-link header__auth-link header__auth-sign-up" href="#">Sign up</a>
+            <nav class="header__auth">
+              <a class="header__auth-link" href="#">Log In</a>
+              <a class="header__auth-link header__auth-sign-up" href="#">Sign up</a>
             </nav>
           </div>
         </div>
@@ -40,22 +42,60 @@
     <section class="search">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-12">
-            <div class="search__bar">
-              <button class="btn btn-primary">Find deposits</button>
+          <div class="search__bar col-12">
+            <div class="search__bar-select search__bar-select_residency">
+              <label class="search__bar-label">Your residency</label>
+              <select class="form-select" id="residency">
+                <option value="de">Germany</option>
+                <option value="fr">France</option>
+                <option value="it">Italy</option>
+                <option value="esp">Spain</option>
+              </select>
+              <label class="search__bar-label search__bar-label_mobile">
+                EUR, 1 mth, 2 mths, 3 mths, 1 year, Ordinary
+              </label>
             </div>
+
+            <div class="search__bar-select search__bar-select_currency">
+              <label class="search__bar-label">Currency</label>
+              <select class="form-select" id="currency">
+                <option value="eur">EUR</option>
+                <option value="usd">USD</option>
+                <option value="chf">CHF</option>
+              </select>
+            </div>
+
+            <div class="search__bar-select search__bar-select_terms">
+              <label class="search__bar-label">Terms</label>
+              <select class="form-select" id="terms">
+                <option value="1">All</option>
+                <option value="2">3 mths</option>
+                <option value="3">6 mths</option>
+                <option value="4">9 mths</option>
+                <option value="5">12 mths</option>
+              </select>
+            </div>
+
+            <div class="search__bar-select search__bar-select_type">
+              <label class="search__bar-label">Deposit type</label>
+              <select class="form-select" id="terms">
+                <option value="1">Ordinary</option>
+                <option value="2">€100</option>
+                <option value="3">€5k–150k</option>
+              </select>
+            </div>
+
+            <button class="btn btn-primary"><span>Find deposits</span></button>
           </div>
 
-          <div class="col-12">
-            <div class="quick-search">
-              <div class="quick-search__tags">
-                <p class="quick-search__title">Quick search:</p>
-                <div class="quick-search__tag">Best interest rates</div>
-                <div class="quick-search__tag">Available online</div>
-              </div>
-
-              <button class="quick-search__reset">Reset all</button>
+          <div class="quick-search col-12">
+            <div class="quick-search__tags">
+              <p class="quick-search__title">Quick search:</p>
+              <div class="quick-search__tag">Best interest rates</div>
+              <div class="quick-search__tag">Available online</div>
             </div>
+
+            <button class="quick-search__reset">Reset all</button>
           </div>
         </div>
       </div>
@@ -273,7 +313,7 @@
               <div class="deposit-card__info">
                 <div class="deposit-card__bank">
                   <div class="deposit-card__bank-logo">
-                    <img src="./assets/bank-logos/7.png" alt="bankpic" />
+                    <img src="./assets/bank-logos/6.png" alt="bankpic" />
                   </div>
                   <div class="deposit-card__bank-info">
                     <div class="deposit-card__bank-name">Austrian Anadi Bank AG</div>
@@ -477,6 +517,10 @@
       </div>
     </main>
 
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="row"></div>
+      </div>
+    </footer>
   </body>
 </html>
