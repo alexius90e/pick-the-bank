@@ -1,13 +1,22 @@
 .quick-search {
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 37px;
+  margin-bottom: 24px;
+
+  @include tablet {
+    padding: 0 34px;
+  }
 
   @include mobile {
     display: none;
+  }
+
+  .col-12 {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
   }
 
   &__tags {
