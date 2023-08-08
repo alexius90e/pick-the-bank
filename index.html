@@ -101,7 +101,7 @@
       </div>
     </section>
 
-    <main class="main">
+    <main class="main" id="main">
       <div class="container-fluid">
         <section class="protected">
           <h6 class="protected__title">Read about deposit guarantee schemes</h6>
@@ -228,6 +228,25 @@
           </article>
         </section>
 
+        <section class="blog-card">
+          <figure class="blog-card__figure">
+            <img class="blog-card__image" src="./assets/germany.svg" alt="germany" />
+          </figure>
+
+          <div class="blog-card__info">
+            <h4 class="blog-card__title">Top interest rates in German banks - May 2023</h4>
+            <div class="blog-card__author">
+              <div class="blog-card__author-info">
+                <img class="blog-card__author-photo" src="./assets/avatar.png" alt="avatar" />
+                <span class="blog-card__author-name">Alexander Gromov</span>
+              </div>
+              <div class="blog-card__author-description">Founder and CEO</div>
+            </div>
+          </div>
+
+          <button class="blog-card__button"></button>
+        </section>
+
         <section class="deposits">
           <div class="deposits__top">
             <div class="deposits__top-text">
@@ -235,287 +254,303 @@
               <p class="deposits__description">All deposits available in <b>Germany</b></p>
             </div>
             <div class="deposits__top-filter"></div>
+          </div>
 
-            <article class="deposit-card">
-              <div class="deposit-card__info">
-                <div class="deposit-card__bank">
-                  <div class="deposit-card__bank-logo">
-                    <img src="./assets/bank-logos/4.png" alt="bankpic" />
+          <article class="deposit-card">
+            <div class="deposit-card__info">
+              <div class="deposit-card__bank">
+                <div class="deposit-card__bank-logo">
+                  <img src="./assets/bank-logos/4.png" alt="bankpic" />
+                </div>
+                <div class="deposit-card__bank-info">
+                  <div class="deposit-card__bank-name">Addiko Bank AG</div>
+                  <div class="deposit-card__bank-country">Austria</div>
+                </div>
+              </div>
+
+              <div class="deposit-card__details">
+                <div class="deposit-card__details-rate">1.9%</div>
+                <div class="deposit-card__details-term">6 mths</div>
+                <div class="deposit-card__details-amount">€5k–150k</div>
+              </div>
+
+              <div class="deposit-card__buttons">
+                <button class="btn btn-primary deposit-card__button-primary">Open online</button>
+                <button class="deposit-card__button-favorites"></button>
+              </div>
+            </div>
+
+            <div class="deposit-card__tags">
+              <div class="deposit-card__tag deposit-card__tag_online">Available onine</div>
+              <div class="deposit-card__tag deposit-card__tag_protected">Protected up to €100k</div>
+            </div>
+
+            <div class="deposit-card__more-details">
+              <button class="deposit-card__more-details-button">More details</button>
+            </div>
+          </article>
+
+          <article class="deposit-card">
+            <div class="deposit-card__info">
+              <div class="deposit-card__bank">
+                <div class="deposit-card__bank-logo">
+                  <img src="./assets/bank-logos/5.png" alt="bankpic" />
+                </div>
+                <div class="deposit-card__bank-info">
+                  <div class="deposit-card__bank-name">
+                    Allgemeine Sparkasse Oberösterreich Bankaktiengesellschaft
                   </div>
-                  <div class="deposit-card__bank-info">
-                    <div class="deposit-card__bank-name">Addiko Bank AG</div>
-                    <div class="deposit-card__bank-country">Austria</div>
+                  <div class="deposit-card__bank-country">Austria</div>
+                </div>
+              </div>
+
+              <div class="deposit-card__details">
+                <div class="deposit-card__details-rate">2,5%</div>
+                <div class="deposit-card__details-term">12 mths</div>
+                <div class="deposit-card__details-amount">€100</div>
+              </div>
+
+              <div class="deposit-card__buttons">
+                <button class="btn btn-primary deposit-card__button-primary">Open online</button>
+                <button class="deposit-card__button-favorites"></button>
+              </div>
+            </div>
+
+            <div class="deposit-card__tags">
+              <div class="deposit-card__tag deposit-card__tag_protected">Protected up to €100k</div>
+            </div>
+
+            <div class="deposit-card__more-details">
+              <button class="deposit-card__more-details-button">More details</button>
+            </div>
+          </article>
+
+          <article class="deposit-card">
+            <div class="deposit-card__info">
+              <div class="deposit-card__bank">
+                <div class="deposit-card__bank-logo">
+                  <img src="./assets/bank-logos/6.png" alt="bankpic" />
+                </div>
+                <div class="deposit-card__bank-info">
+                  <div class="deposit-card__bank-name">Austrian Anadi Bank AG</div>
+                  <div class="deposit-card__bank-country">Austria</div>
+                </div>
+              </div>
+
+              <div class="deposit-card__details">
+                <div class="deposit-card__details-rate">1,75%</div>
+                <div class="deposit-card__details-term">3 mths</div>
+                <div class="deposit-card__details-amount">€2,5k–500k</div>
+              </div>
+
+              <div class="deposit-card__buttons">
+                <button class="btn btn-primary deposit-card__button-primary">Open online</button>
+                <button class="deposit-card__button-favorites"></button>
+              </div>
+            </div>
+
+            <div class="deposit-card__tags">
+              <div class="deposit-card__tag deposit-card__tag_subordinated">
+                Subordinated deposit
+              </div>
+            </div>
+
+            <div class="deposit-card__more-details">
+              <button class="deposit-card__more-details-button">More details</button>
+            </div>
+          </article>
+
+          <article class="deposit-card">
+            <div class="deposit-card__info">
+              <div class="deposit-card__bank">
+                <div class="deposit-card__bank-logo">
+                  <img src="./assets/bank-logos/7.png" alt="bankpic" />
+                </div>
+                <div class="deposit-card__bank-info">
+                  <div class="deposit-card__bank-name">BKS Bank AG</div>
+                  <div class="deposit-card__bank-country">Austria</div>
+                </div>
+              </div>
+
+              <div class="deposit-card__details">
+                <div class="deposit-card__details-rate">2%</div>
+                <div class="deposit-card__details-term">12 mths</div>
+                <div class="deposit-card__details-amount">€4k–5,000k</div>
+              </div>
+
+              <div class="deposit-card__buttons">
+                <button class="btn btn-primary deposit-card__button-primary">Open online</button>
+                <button class="deposit-card__button-favorites"></button>
+              </div>
+            </div>
+
+            <div class="deposit-card__tags">
+              <div class="deposit-card__tag deposit-card__tag_subordinated">
+                Subordinated deposit
+              </div>
+            </div>
+
+            <div class="deposit-card__more-details">
+              <button class="deposit-card__more-details-button">More details</button>
+            </div>
+          </article>
+
+          <article class="deposit-card">
+            <div class="deposit-card__info">
+              <div class="deposit-card__bank">
+                <div class="deposit-card__bank-logo">
+                  <img src="./assets/bank-logos/4.png" alt="bankpic" />
+                </div>
+                <div class="deposit-card__bank-info">
+                  <div class="deposit-card__bank-name">DenizBank AG</div>
+                  <div class="deposit-card__bank-country">Austria</div>
+                </div>
+              </div>
+
+              <div class="deposit-card__details">
+                <div class="deposit-card__details-rate">1.5%</div>
+                <div class="deposit-card__details-term">3 mths</div>
+                <div class="deposit-card__details-amount">€1k</div>
+              </div>
+
+              <div class="deposit-card__buttons">
+                <button class="btn btn-primary deposit-card__button-primary">Open online</button>
+                <button class="deposit-card__button-favorites"></button>
+              </div>
+            </div>
+
+            <div class="deposit-card__tags">
+              <div class="deposit-card__tag deposit-card__tag_protected">Protected up to €100k</div>
+            </div>
+
+            <div class="deposit-card__more-details">
+              <button class="deposit-card__more-details-button">More details</button>
+            </div>
+          </article>
+
+          <article class="deposit-card">
+            <div class="deposit-card__info">
+              <div class="deposit-card__bank">
+                <div class="deposit-card__bank-logo">
+                  <img src="./assets/bank-logos/4.png" alt="bankpic" />
+                </div>
+                <div class="deposit-card__bank-info">
+                  <div class="deposit-card__bank-name">Addiko Bank AG</div>
+                  <div class="deposit-card__bank-country">Austria</div>
+                </div>
+              </div>
+
+              <div class="deposit-card__details">
+                <div class="deposit-card__details-rate">1,50%</div>
+                <div class="deposit-card__details-term">3 mths</div>
+                <div class="deposit-card__details-amount">€5k–150k</div>
+              </div>
+
+              <div class="deposit-card__buttons">
+                <button class="btn btn-primary deposit-card__button-primary">Open online</button>
+                <button class="deposit-card__button-favorites"></button>
+              </div>
+            </div>
+
+            <div class="deposit-card__tags"></div>
+
+            <div class="deposit-card__more-details">
+              <button class="deposit-card__more-details-button">More details</button>
+            </div>
+          </article>
+
+          <article class="deposit-card">
+            <div class="deposit-card__info">
+              <div class="deposit-card__bank">
+                <div class="deposit-card__bank-logo">
+                  <img src="./assets/bank-logos/5.png" alt="bankpic" />
+                </div>
+                <div class="deposit-card__bank-info">
+                  <div class="deposit-card__bank-name">
+                    Allgemeine Sparkasse Oberösterreich Bankaktiengesellschaft
                   </div>
-                </div>
-
-                <div class="deposit-card__details">
-                  <div class="deposit-card__details-rate">1.9%</div>
-                  <div class="deposit-card__details-term">6 mths</div>
-                  <div class="deposit-card__details-amount">€5k–150k</div>
-                </div>
-
-                <div class="deposit-card__buttons">
-                  <button class="btn btn-primary deposit-card__button-primary">Open online</button>
-                  <button class="deposit-card__button-favorites"></button>
+                  <div class="deposit-card__bank-country">Austria</div>
                 </div>
               </div>
 
-              <div class="deposit-card__tags">
-                <div class="deposit-card__tag deposit-card__tag_online">Available onine</div>
-                <div class="deposit-card__tag deposit-card__tag_protected">
-                  Protected up to €100k
+              <div class="deposit-card__details">
+                <div class="deposit-card__details-rate">2,5%</div>
+                <div class="deposit-card__details-term">6 mths</div>
+                <div class="deposit-card__details-amount">€5k–150k</div>
+              </div>
+
+              <div class="deposit-card__buttons">
+                <button class="btn btn-primary deposit-card__button-primary">Open online</button>
+                <button class="deposit-card__button-favorites"></button>
+              </div>
+            </div>
+
+            <div class="deposit-card__tags"></div>
+
+            <div class="deposit-card__more-details">
+              <button class="deposit-card__more-details-button">More details</button>
+            </div>
+          </article>
+
+          <article class="deposit-card">
+            <div class="deposit-card__info">
+              <div class="deposit-card__bank">
+                <div class="deposit-card__bank-logo">
+                  <img src="./assets/bank-logos/6.png" alt="bankpic" />
+                </div>
+                <div class="deposit-card__bank-info">
+                  <div class="deposit-card__bank-name">Austrian Anadi Bank AG</div>
+                  <div class="deposit-card__bank-country">Austria</div>
                 </div>
               </div>
 
-              <div class="deposit-card__more-details">
-                <button class="deposit-card__more-details-button">More details</button>
-              </div>
-            </article>
-
-            <article class="deposit-card">
-              <div class="deposit-card__info">
-                <div class="deposit-card__bank">
-                  <div class="deposit-card__bank-logo">
-                    <img src="./assets/bank-logos/5.png" alt="bankpic" />
-                  </div>
-                  <div class="deposit-card__bank-info">
-                    <div class="deposit-card__bank-name">
-                      Allgemeine Sparkasse Oberösterreich Bankaktiengesellschaft
-                    </div>
-                    <div class="deposit-card__bank-country">Austria</div>
-                  </div>
-                </div>
-
-                <div class="deposit-card__details">
-                  <div class="deposit-card__details-rate">2,5%</div>
-                  <div class="deposit-card__details-term">12 mths</div>
-                  <div class="deposit-card__details-amount">€100</div>
-                </div>
-
-                <div class="deposit-card__buttons">
-                  <button class="btn btn-primary deposit-card__button-primary">Open online</button>
-                  <button class="deposit-card__button-favorites"></button>
-                </div>
+              <div class="deposit-card__details">
+                <div class="deposit-card__details-rate">2,75%</div>
+                <div class="deposit-card__details-term">3 mths</div>
+                <div class="deposit-card__details-amount">€5k–150k</div>
               </div>
 
-              <div class="deposit-card__tags">
-                <div class="deposit-card__tag deposit-card__tag_protected">
-                  Protected up to €100k
-                </div>
+              <div class="deposit-card__buttons">
+                <button class="btn btn-primary deposit-card__button-primary">Open online</button>
+                <button class="deposit-card__button-favorites"></button>
               </div>
+            </div>
 
-              <div class="deposit-card__more-details">
-                <button class="deposit-card__more-details-button">More details</button>
-              </div>
-            </article>
+            <div class="deposit-card__tags">
+              <div class="deposit-card__tag deposit-card__tag_protected">Protected up to €100k</div>
+            </div>
 
-            <article class="deposit-card">
-              <div class="deposit-card__info">
-                <div class="deposit-card__bank">
-                  <div class="deposit-card__bank-logo">
-                    <img src="./assets/bank-logos/6.png" alt="bankpic" />
-                  </div>
-                  <div class="deposit-card__bank-info">
-                    <div class="deposit-card__bank-name">Austrian Anadi Bank AG</div>
-                    <div class="deposit-card__bank-country">Austria</div>
-                  </div>
-                </div>
+            <div class="deposit-card__more-details">
+              <button class="deposit-card__more-details-button">More details</button>
+            </div>
+          </article>
 
-                <div class="deposit-card__details">
-                  <div class="deposit-card__details-rate">1,75%</div>
-                  <div class="deposit-card__details-term">3 mths</div>
-                  <div class="deposit-card__details-amount">€2,5k–500k</div>
-                </div>
-
-                <div class="deposit-card__buttons">
-                  <button class="btn btn-primary deposit-card__button-primary">Open online</button>
-                  <button class="deposit-card__button-favorites"></button>
-                </div>
-              </div>
-
-              <div class="deposit-card__tags">
-                <div class="deposit-card__tag deposit-card__tag_subordinated">
-                  Subordinated deposit
-                </div>
-              </div>
-
-              <div class="deposit-card__more-details">
-                <button class="deposit-card__more-details-button">More details</button>
-              </div>
-            </article>
-
-            <article class="deposit-card">
-              <div class="deposit-card__info">
-                <div class="deposit-card__bank">
-                  <div class="deposit-card__bank-logo">
-                    <img src="./assets/bank-logos/7.png" alt="bankpic" />
-                  </div>
-                  <div class="deposit-card__bank-info">
-                    <div class="deposit-card__bank-name">BKS Bank AG</div>
-                    <div class="deposit-card__bank-country">Austria</div>
-                  </div>
-                </div>
-
-                <div class="deposit-card__details">
-                  <div class="deposit-card__details-rate">2%</div>
-                  <div class="deposit-card__details-term">12 mths</div>
-                  <div class="deposit-card__details-amount">€4k–5,000k</div>
-                </div>
-
-                <div class="deposit-card__buttons">
-                  <button class="btn btn-primary deposit-card__button-primary">Open online</button>
-                  <button class="deposit-card__button-favorites"></button>
-                </div>
-              </div>
-
-              <div class="deposit-card__tags">
-                <div class="deposit-card__tag deposit-card__tag_subordinated">
-                  Subordinated deposit
-                </div>
-              </div>
-
-              <div class="deposit-card__more-details">
-                <button class="deposit-card__more-details-button">More details</button>
-              </div>
-            </article>
-
-            <article class="deposit-card">
-              <div class="deposit-card__info">
-                <div class="deposit-card__bank">
-                  <div class="deposit-card__bank-logo">
-                    <img src="./assets/bank-logos/4.png" alt="bankpic" />
-                  </div>
-                  <div class="deposit-card__bank-info">
-                    <div class="deposit-card__bank-name">DenizBank AG</div>
-                    <div class="deposit-card__bank-country">Austria</div>
-                  </div>
-                </div>
-
-                <div class="deposit-card__details">
-                  <div class="deposit-card__details-rate">1.5%</div>
-                  <div class="deposit-card__details-term">3 mths</div>
-                  <div class="deposit-card__details-amount">€1k</div>
-                </div>
-
-                <div class="deposit-card__buttons">
-                  <button class="btn btn-primary deposit-card__button-primary">Open online</button>
-                  <button class="deposit-card__button-favorites"></button>
-                </div>
-              </div>
-
-              <div class="deposit-card__tags">
-                <div class="deposit-card__tag deposit-card__tag_protected">
-                  Protected up to €100k
-                </div>
-              </div>
-
-              <div class="deposit-card__more-details">
-                <button class="deposit-card__more-details-button">More details</button>
-              </div>
-            </article>
-
-            <article class="deposit-card">
-              <div class="deposit-card__info">
-                <div class="deposit-card__bank">
-                  <div class="deposit-card__bank-logo">
-                    <img src="./assets/bank-logos/4.png" alt="bankpic" />
-                  </div>
-                  <div class="deposit-card__bank-info">
-                    <div class="deposit-card__bank-name">Addiko Bank AG</div>
-                    <div class="deposit-card__bank-country">Austria</div>
-                  </div>
-                </div>
-
-                <div class="deposit-card__details">
-                  <div class="deposit-card__details-rate">1,50%</div>
-                  <div class="deposit-card__details-term">3 mths</div>
-                  <div class="deposit-card__details-amount">€5k–150k</div>
-                </div>
-
-                <div class="deposit-card__buttons">
-                  <button class="btn btn-primary deposit-card__button-primary">Open online</button>
-                  <button class="deposit-card__button-favorites"></button>
-                </div>
-              </div>
-
-              <div class="deposit-card__tags"></div>
-
-              <div class="deposit-card__more-details">
-                <button class="deposit-card__more-details-button">More details</button>
-              </div>
-            </article>
-
-            <article class="deposit-card">
-              <div class="deposit-card__info">
-                <div class="deposit-card__bank">
-                  <div class="deposit-card__bank-logo">
-                    <img src="./assets/bank-logos/5.png" alt="bankpic" />
-                  </div>
-                  <div class="deposit-card__bank-info">
-                    <div class="deposit-card__bank-name">
-                      Allgemeine Sparkasse Oberösterreich Bankaktiengesellschaft
-                    </div>
-                    <div class="deposit-card__bank-country">Austria</div>
-                  </div>
-                </div>
-
-                <div class="deposit-card__details">
-                  <div class="deposit-card__details-rate">2,5%</div>
-                  <div class="deposit-card__details-term">6 mths</div>
-                  <div class="deposit-card__details-amount">€5k–150k</div>
-                </div>
-
-                <div class="deposit-card__buttons">
-                  <button class="btn btn-primary deposit-card__button-primary">Open online</button>
-                  <button class="deposit-card__button-favorites"></button>
-                </div>
-              </div>
-
-              <div class="deposit-card__tags"></div>
-
-              <div class="deposit-card__more-details">
-                <button class="deposit-card__more-details-button">More details</button>
-              </div>
-            </article>
-
-            <article class="deposit-card">
-              <div class="deposit-card__info">
-                <div class="deposit-card__bank">
-                  <div class="deposit-card__bank-logo">
-                    <img src="./assets/bank-logos/6.png" alt="bankpic" />
-                  </div>
-                  <div class="deposit-card__bank-info">
-                    <div class="deposit-card__bank-name">Austrian Anadi Bank AG</div>
-                    <div class="deposit-card__bank-country">Austria</div>
-                  </div>
-                </div>
-
-                <div class="deposit-card__details">
-                  <div class="deposit-card__details-rate">2,75%</div>
-                  <div class="deposit-card__details-term">3 mths</div>
-                  <div class="deposit-card__details-amount">€5k–150k</div>
-                </div>
-
-                <div class="deposit-card__buttons">
-                  <button class="btn btn-primary deposit-card__button-primary">Open online</button>
-                  <button class="deposit-card__button-favorites"></button>
-                </div>
-              </div>
-
-              <div class="deposit-card__tags">
-                <div class="deposit-card__tag deposit-card__tag_protected">
-                  Protected up to €100k
-                </div>
-              </div>
-
-              <div class="deposit-card__more-details">
-                <button class="deposit-card__more-details-button">More details</button>
-              </div>
-            </article>
+          <div class="deposits__buttons">
+            <a class="btn btn-primary deposits__button-to-top" href="#main">Return to top</a>
           </div>
         </section>
       </div>
     </main>
+
+    <section class="subscription">
+      <div class="container-fluid">
+        <figure class="subscription__figure">
+          <img
+            class="subscription__image"
+            src="./assets/icons/subscription-icon.png"
+            alt="subscription"
+          />
+        </figure>
+
+        <h2 class="subscription__description">Sign up to our monthly deposits overview!</h2>
+
+        <p class="subscription__description">⚡️ Stay updated of the highest rates!</p>
+
+        <div class="subscription__buttons">
+          <button class="btn btn-primary subscription__button">Sign up for free</button>
+        </div>
+      </div>
+    </section>
 
     <footer class="footer">
       <div class="container-fluid">

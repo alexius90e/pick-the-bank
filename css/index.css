@@ -368,8 +368,8 @@ figure {
   background-color: #3bf;
 }
 .deposit-card__tag_subordinated {
-  color: #FF5732;
-  background-color: #FFDDD6;
+  color: #ff5732;
+  background-color: #ffddd6;
 }
 .deposit-card__more-details {
   margin-top: 13px;
@@ -661,6 +661,10 @@ figure {
     background: none;
   }
 }
+.search__bar-select .form-select:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
 .search__bar-label {
   color: #506392;
   font-size: 11px;
@@ -689,7 +693,7 @@ figure {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 14px 20px;
+  padding: 13px 24px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -705,6 +709,9 @@ figure {
 }
 @media (max-width: 768px) {
   .search__bar .btn {
+    height: 42px;
+    width: 42px;
+    padding: 0;
     background-image: url(../assets/search-icon.svg);
     background-position: center;
     background-size: 20px;
@@ -889,4 +896,262 @@ figure {
   font-weight: 500;
   line-height: 20px;
   letter-spacing: 0.6px;
+}
+.deposits__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.deposits__button-to-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 4px;
+  min-width: 240px;
+  margin: 0 auto;
+  padding: 21px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+}
+@media (max-width: 576px) {
+  .deposits__button-to-top {
+    min-width: 100%;
+  }
+}
+.deposits__button-to-top::after {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url(../assets/icons/top-icon.svg) no-repeat center;
+}
+
+.blog-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+  margin: 16px 0 32px;
+  padding: 16px 24px;
+  border-radius: 12px;
+  border: 4px solid #ffffff;
+  background: #f5f8ff;
+}
+@media (max-width: 768px) {
+  .blog-card {
+    gap: 8px;
+  }
+}
+@media (max-width: 576px) {
+  .blog-card {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 4px;
+    padding: 16px;
+  }
+}
+.blog-card__figure {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 64px;
+  border: 1px solid #dbe5ff;
+  background: #ffffff;
+}
+@media (max-width: 992px) {
+  .blog-card__figure {
+    width: 56px;
+    height: 56px;
+  }
+}
+@media (max-width: 768px) {
+  .blog-card__figure {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 400px) {
+  .blog-card__figure {
+    display: block;
+    width: auto;
+    height: auto;
+    background: none;
+    border: none;
+  }
+}
+.blog-card__image {
+  width: 32px;
+  height: auto;
+}
+@media (max-width: 992px) {
+  .blog-card__image {
+    width: 28px;
+  }
+}
+@media (max-width: 768px) {
+  .blog-card__image {
+    width: 20px;
+  }
+}
+.blog-card__info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.blog-card__title {
+  margin: 0 0 4px;
+  color: #001855;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+@media (max-width: 768px) {
+  .blog-card__title {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+  }
+}
+.blog-card__author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 8px;
+}
+@media (max-width: 768px) {
+  .blog-card__author {
+    gap: 4px;
+  }
+}
+@media (max-width: 400px) {
+  .blog-card__author {
+    display: block;
+  }
+}
+.blog-card__author-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+@media (max-width: 768px) {
+  .blog-card__author-info {
+    gap: 4px;
+  }
+}
+@media (max-width: 400px) {
+  .blog-card__author-info {
+    gap: 2px;
+  }
+}
+.blog-card__author-info::after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 10px;
+  background-color: #c6ccdc;
+}
+@media (max-width: 400px) {
+  .blog-card__author-info::after {
+    display: none;
+  }
+}
+.blog-card__author-photo {
+  width: 24px;
+  height: 24px;
+  border-radius: 24px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 768px) {
+  .blog-card__author-photo {
+    display: none;
+  }
+}
+.blog-card__author-name {
+  color: #001855;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+}
+@media (max-width: 400px) {
+  .blog-card__author-name {
+    margin-bottom: 2px;
+  }
+}
+.blog-card__author-description {
+  color: #97a2be;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.1px;
+}
+.blog-card__button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  height: 32px;
+  width: 32px;
+  border: none;
+  background: url(../assets/icons/arrow-right-icon.svg) center no-repeat;
+  cursor: pointer;
+}
+@media (max-width: 576px) {
+  .blog-card__button {
+    display: none;
+  }
+}
+
+.subscription {
+  padding: 96px 34px 128px;
+  margin: 16px auto;
+  max-width: 1408px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 16px;
+  background: #001855;
+}
+.subscription .container-fluid {
+  padding: 0;
+  max-width: 1140px;
 }

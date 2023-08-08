@@ -1,5 +1,4 @@
 .deposits {
-
   &__title {
     color: $blue900;
     margin: 0 0 4px;
@@ -24,6 +23,38 @@
     }
 
     &-filter {
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__button-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    min-width: 240px;
+    margin: 0 auto;
+    padding: 21px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    box-sizing: border-box;
+    border: none;
+
+    @include mobile {
+      min-width: 100%;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 16px;
+      background: url(../assets/icons/top-icon.svg) no-repeat center;
     }
   }
 }

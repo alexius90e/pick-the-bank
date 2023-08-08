@@ -1,0 +1,13 @@
+.subscription {
+  padding: 96px 34px 128px;
+  margin: 16px auto;
+  max-width: 1408px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  background: $blue900;
+
+  & .container-fluid {
+    padding: 0;
+    max-width: 1140px;
+  }
+}
