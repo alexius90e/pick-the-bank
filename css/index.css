@@ -1151,7 +1151,71 @@ figure {
   border-radius: 16px;
   background: #001855;
 }
+@media (max-width: 992px) {
+  .subscription {
+    border-radius: 0;
+  }
+}
+@media (max-width: 768px) {
+  .subscription {
+    padding: 64px 34px 96px;
+  }
+}
+@media (max-width: 576px) {
+  .subscription {
+    padding: 34px 20px 64px;
+  }
+}
 .subscription .container-fluid {
   padding: 0;
   max-width: 1140px;
+}
+.subscription__figure {
+  margin: 0 0 16px;
+  padding: 18px 20px;
+  text-align: center;
+}
+.subscription__title {
+  max-width: 600px;
+  margin: 0 auto 16px;
+  color: #ffffff;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .subscription__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+.subscription__description {
+  margin: 0 auto 48px;
+  color: #f5f6fa;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+}
+.subscription__buttons {
+  text-align: center;
+}
+.subscription__button {
+  min-width: 240px;
+  margin: 0 auto;
+  padding: 21px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+}
+@media (max-width: 576px) {
+  .subscription__button {
+    min-width: 180px;
+  }
 }
