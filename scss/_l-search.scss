@@ -11,20 +11,106 @@
 
   &__bar {
     display: flex;
-    justify-content: flex-end;
+    gap: 8px;
     max-width: 1140px;
     margin: 0 auto 8px;
     padding: 10px;
     padding-left: 55px;
     box-sizing: border-box;
     border: 1px solid $grey200;
-    border-radius: 32px;
+    border-radius: 50px;
     background: url(../assets/search-icon.svg) no-repeat;
     background-position: left 15px center;
 
+    @include tablet {
+      padding-left: 0;
+      background: none;
+    }
+
+    &-select {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      padding-left: 28px;
+      overflow: hidden;
+
+      @include tablet {
+        padding-left: 20px;
+      }
+
+      @include mobile {
+        display: none;
+      }
+
+      &_residency {
+        @include mobile {
+          display: flex;
+          padding-left: 28px;
+        }
+      }
+
+      &_currency {
+        flex: 0 0 auto;
+        max-width: max-content;
+      }
+
+      &_terms {
+      }
+
+      &_type {
+      }
+
+      & .form-select {
+        flex: 1 1 auto;
+        width: auto;
+        padding: 2px 4px;
+        padding-right: 24px;
+        color: $blue900;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px;
+        border: none;
+        background-color: inherit;
+        background-position: right 4px center;
+        min-width: auto;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @include mobile {
+          background: none;
+        }
+      }
+    }
+
+    &-label {
+      color: $grey800;
+      font-size: 11px;
+      font-weight: 500;
+      line-height: 16px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      @include mobile {
+        display: none;
+      }
+
+      &_mobile {
+        display: none;
+        word-wrap: break-word;
+
+        @include mobile {
+          display: block;
+          padding-left: 4px;
+        }
+      }
+    }
+
     & .btn {
       display: flex;
-      padding: 13px 24px;
+      padding: 14px 20px;
       justify-content: center;
       align-items: center;
       gap: 4px;
@@ -32,6 +118,20 @@
       font-weight: 700;
       line-height: 16px;
       letter-spacing: 0.1px;
+      border: none;
+
+      @include tablet {
+        background-image: url(../assets/search-icon.svg);
+        background-position: center;
+        background-size: 20px;
+        background-repeat: no-repeat;
+      }
+
+      & span {
+        @include tablet {
+          display: none;
+        }
+      }
     }
   }
 }
