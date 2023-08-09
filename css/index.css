@@ -1886,3 +1886,33 @@ figure {
     min-width: 180px;
   }
 }
+
+.not-found {
+  padding: 154px 0;
+}
+.not-found__image {
+  margin-bottom: 16px;
+  text-align: center;
+}
+.not-found__image img {
+  width: 128px;
+  height: auto;
+}
+.not-found__title {
+  margin: 0;
+  color: #001855;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+}
+.not-found__description {
+  margin: 0;
+  color: #506392;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+}
