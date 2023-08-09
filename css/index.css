@@ -512,6 +512,7 @@ figure {
           transform: translateY(-50%);
 }
 .language .custom-select .select-items {
+  max-height: 160px;
   z-index: 200;
 }
 .language .custom-select[data-value=at] .select-selected::before {
@@ -1471,6 +1472,13 @@ figure {
   letter-spacing: 0.3px;
 }
 .deposits__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
   margin: 0 0 36px;
   color: #506392;
   font-size: 15px;
@@ -1479,9 +1487,68 @@ figure {
   line-height: 20px;
   letter-spacing: 0.6px;
 }
-.deposits__description img {
+@media (max-width: 768px) {
+  .deposits__description {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+.deposits__description span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+}
+@media (max-width: 768px) {
+  .deposits__description span {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+  }
+}
+.deposits__description span img {
   width: 20px;
   height: auto;
+}
+.deposits__description .custom-select {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+.deposits__description .custom-select .select-selected {
+  position: relative;
+  padding-right: 20px;
+  color: #506392;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  background-position: right center;
+  background-size: 16px 16px;
+}
+.deposits__description .custom-select .select-selected:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  right: 28px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.deposits__description .custom-select .select-items {
+  left: auto;
+  right: 0;
+  padding: 12px 16px;
+  z-index: 200;
 }
 .deposits__buttons {
   display: -webkit-box;
