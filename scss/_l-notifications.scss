@@ -1,0 +1,84 @@
+.notifications {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 300;
+  background-color: $white;
+
+  & .notification {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 16px 20px;
+    box-sizing: border-box;
+
+    &__logo {
+      width: 20px;
+      height: auto;
+    }
+
+    &__text,
+    &__text_sm {
+      flex: 1 1 auto;
+      color: $grey800;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+
+      @include mobile {
+        display: none;
+      }
+
+      & b {
+        color: $blue900;
+        font-weight: 700;
+      }
+    }
+
+    &__link {
+      flex: 0 0 auto;
+      margin-right: 24px;
+      color: $blue500;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+      text-decoration: none;
+
+      @include mobile {
+        display: none;
+      }
+
+    }
+
+    &__text_sm {
+      display: none;
+
+      @include mobile {
+        display: inline;
+      }
+    }
+
+    &__text_sm > * {
+      @include mobile {
+        display: inline;
+      }
+    }
+
+    
+
+    &__close {
+      flex: 0 0 auto;
+      width: 20px;
+      height: 20px;
+      border: none;
+      background: url(../assets/close-icon.svg) center no-repeat;
+      background-size: 20px 20px;
+      cursor: pointer;
+    }
+  }
+}

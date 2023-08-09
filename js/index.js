@@ -1,3 +1,6 @@
+import '../js/notifications.js'
+
+
 const residencySelect = document.getElementById('residencySelect');
 
 const customSelects = document.querySelectorAll('.custom-select');

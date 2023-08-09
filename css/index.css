@@ -451,13 +451,14 @@ figure {
   border: none;
   background: none;
 }
-.deposit-card.template .deposit-card__more-details-button {
+.deposit-card.template .deposit-card__more-details-button-template {
   height: 18px;
   width: 94px;
   color: #f5f8ff;
   background: none;
   background-color: #f5f8ff;
   border-radius: 100px;
+  border: none;
 }
 
 .custom-select {
@@ -1982,4 +1983,91 @@ figure {
   font-weight: 500;
   line-height: 20px;
   text-align: center;
+}
+
+.notifications {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 300;
+  background-color: #ffffff;
+}
+.notifications .notification {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.notifications .notification__logo {
+  width: 20px;
+  height: auto;
+}
+.notifications .notification__text, .notifications .notification__text_sm {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  color: #506392;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+@media (max-width: 576px) {
+  .notifications .notification__text, .notifications .notification__text_sm {
+    display: none;
+  }
+}
+.notifications .notification__text b, .notifications .notification__text_sm b {
+  color: #001855;
+  font-weight: 700;
+}
+.notifications .notification__link {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin-right: 24px;
+  color: #326bff;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  text-decoration: none;
+}
+@media (max-width: 576px) {
+  .notifications .notification__link {
+    display: none;
+  }
+}
+.notifications .notification__text_sm {
+  display: none;
+}
+@media (max-width: 576px) {
+  .notifications .notification__text_sm {
+    display: inline;
+  }
+}
+@media (max-width: 576px) {
+  .notifications .notification__text_sm > * {
+    display: inline;
+  }
+}
+.notifications .notification__close {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: url(../assets/close-icon.svg) center no-repeat;
+  background-size: 20px 20px;
+  cursor: pointer;
 }
