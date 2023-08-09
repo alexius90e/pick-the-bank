@@ -392,6 +392,37 @@ figure {
   border: none;
   background: url(../assets/dropdown-blue-icon.svg) no-repeat right center;
 }
+.deposit-card__more-details .card {
+  padding: 40px 24px 40px 24px;
+  margin-top: 16px;
+  border-left: none;
+  border-right: none;
+}
+.deposit-card__more-details .card .table {
+  margin: 0;
+  color: #001855;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+.deposit-card__more-details .card .table tr:first-child td {
+  border-top-width: 1px;
+}
+.deposit-card__more-details .card .table td:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  color: #506392;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
 .deposit-card.template .deposit-card__bank-logo {
   background-color: #f5f8ff;
   border-radius: 100px;
@@ -669,6 +700,34 @@ figure {
 }
 .language .custom-select[data-value=ch] .select-selected::before {
   background-image: url(../assets/countries/switzerland.svg);
+}
+
+.tag {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background: url(../assets/icons/question-icon.svg) center no-repeat;
+}
+.tag__text {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 20;
+  display: none;
+  width: 200px;
+  padding: 12px;
+  border-radius: 8px;
+  color: #7f8daf;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 16px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 8px 48px 0px rgba(0, 0, 102, 0.1);
+          box-shadow: 0px 8px 48px 0px rgba(0, 0, 102, 0.1);
+}
+.tag:hover .tag__text {
+  display: block;
 }
 
 .header {

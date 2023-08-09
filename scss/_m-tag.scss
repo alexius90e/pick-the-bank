@@ -1,0 +1,28 @@
+.tag {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background: url(../assets/icons/question-icon.svg) center no-repeat;
+
+  &__text {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 20;
+    display: none;
+    width: 200px;
+    padding: 12px;
+    border-radius: 8px;
+    color: $grey600;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 16px;
+    background-color: $white;
+    box-shadow: 0px 8px 48px 0px rgba(0, 0, 102, 0.10);
+  }
+
+  &:hover .tag__text {
+    display: block;
+  }
+}
