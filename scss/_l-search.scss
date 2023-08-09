@@ -34,11 +34,10 @@
     }
 
     &-select {
-      flex: 1 1 auto;
+      flex: 1 1 20%;
       display: flex;
       flex-direction: column;
       padding-left: 28px;
-      overflow: hidden;
 
       @include tablet {
         padding-left: 20px;
@@ -50,14 +49,16 @@
 
       &_residency {
         @include mobile {
-          display: flex;
+          flex: 1 1 calc(100% - 50px);
+          max-width: calc(100% - 50px);
+          display: block;
           padding-left: 28px;
         }
       }
 
       &_currency {
         flex: 0 0 auto;
-        max-width: max-content;
+        min-width: 100px;
       }
 
       &_terms {
@@ -72,9 +73,6 @@
       font-size: 11px;
       font-weight: 500;
       line-height: 16px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
 
       @include mobile {
         display: none;
@@ -83,6 +81,9 @@
       &_mobile {
         display: none;
         word-wrap: break-word;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
 
         @include mobile {
           display: block;
@@ -92,6 +93,7 @@
     }
 
     & .btn {
+      flex: 0 0 auto;
       display: flex;
       padding: 13px 24px;
       justify-content: center;
@@ -165,119 +167,119 @@
         transform: translateY(-50%);
       }
 
-      &[data-residency='at']::before {
+      &[data-value='at']::before {
         background-image: url(../assets/countries/austria.svg);
       }
 
-      &[data-residency='be']::before {
+      &[data-value='be']::before {
         background-image: url(../assets/countries/belgium.svg);
       }
 
-      &[data-residency='gb']::before {
+      &[data-value='gb']::before {
         background-image: url(../assets/countries/britain.svg);
       }
 
-      &[data-residency='bg']::before {
+      &[data-value='bg']::before {
         background-image: url(../assets/countries/bulgaria.svg);
       }
 
-      &[data-residency='hr']::before {
+      &[data-value='hr']::before {
         background-image: url(../assets/countries/croatia.svg);
       }
 
-      &[data-residency='cy']::before {
+      &[data-value='cy']::before {
         background-image: url(../assets/countries/cyprus.svg);
       }
 
-      &[data-residency='cz']::before {
+      &[data-value='cz']::before {
         background-image: url(../assets/countries/czech.svg);
       }
 
-      &[data-residency='dk']::before {
+      &[data-value='dk']::before {
         background-image: url(../assets/countries/denmark.svg);
       }
 
-      &[data-residency='ee']::before {
+      &[data-value='ee']::before {
         background-image: url(../assets/countries/estonia.svg);
       }
 
-      &[data-residency='fl']::before {
+      &[data-value='fl']::before {
         background-image: url(../assets/countries/finland.svg);
       }
 
-      &[data-residency='fr']::before {
+      &[data-value='fr']::before {
         background-image: url(../assets/countries/france.svg);
       }
 
-      &[data-residency='de']::before {
+      &[data-value='de']::before {
         background-image: url(../assets/countries/germany.svg);
       }
 
-      &[data-residency='gr']::before {
+      &[data-value='gr']::before {
         background-image: url(../assets/countries/greece.svg);
       }
 
-      &[data-residency='hu']::before {
+      &[data-value='hu']::before {
         background-image: url(../assets/countries/hungary.svg);
       }
 
-      &[data-residency='ie']::before {
+      &[data-value='ie']::before {
         background-image: url(../assets/countries/ireland.svg);
       }
 
-      &[data-residency='it']::before {
+      &[data-value='it']::before {
         background-image: url(../assets/countries/italy.svg);
       }
 
-      &[data-residency='lv']::before {
+      &[data-value='lv']::before {
         background-image: url(../assets/countries/latvia.svg);
       }
 
-      &[data-residency='lt']::before {
+      &[data-value='lt']::before {
         background-image: url(../assets/countries/lithuania.svg);
       }
 
-      &[data-residency='lu']::before {
+      &[data-value='lu']::before {
         background-image: url(../assets/countries/luxembourg.svg);
       }
 
-      &[data-residency='mt']::before {
+      &[data-value='mt']::before {
         background-image: url(../assets/countries/malta.svg);
       }
 
-      &[data-residency='nl']::before {
+      &[data-value='nl']::before {
         background-image: url(../assets/countries/netherlands.svg);
       }
 
-      &[data-residency='pl']::before {
+      &[data-value='pl']::before {
         background-image: url(../assets/countries/poland.svg);
       }
 
-      &[data-residency='pt']::before {
+      &[data-value='pt']::before {
         background-image: url(../assets/countries/portugal.svg);
       }
 
-      &[data-residency='ro']::before {
+      &[data-value='ro']::before {
         background-image: url(../assets/countries/romania.svg);
       }
 
-      &[data-residency='sk']::before {
+      &[data-value='sk']::before {
         background-image: url(../assets/countries/slovakia.svg);
       }
 
-      &[data-residency='sl']::before {
+      &[data-value='sl']::before {
         background-image: url(../assets/countries/slovenia.svg);
       }
 
-      &[data-residency='es']::before {
+      &[data-value='es']::before {
         background-image: url(../assets/countries/spain.svg);
       }
 
-      &[data-residency='se']::before {
+      &[data-value='se']::before {
         background-image: url(../assets/countries/sweden.svg);
       }
 
-      &[data-residency='ch']::before {
+      &[data-value='ch']::before {
         background-image: url(../assets/countries/switzerland.svg);
       }
     }
