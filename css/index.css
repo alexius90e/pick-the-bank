@@ -392,6 +392,105 @@ figure {
   border: none;
   background: url(../assets/dropdown-blue-icon.svg) no-repeat right center;
 }
+.deposit-card__more-details .card {
+  padding: 40px 24px 40px 24px;
+  margin-top: 16px;
+  border-left: none;
+  border-right: none;
+}
+.deposit-card__more-details .card .table {
+  margin: 0;
+  color: #001855;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+.deposit-card__more-details .card .table tr:first-child td {
+  border-top-width: 1px;
+}
+.deposit-card__more-details .card .table td:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  color: #506392;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+.deposit-card.template .deposit-card__bank-logo {
+  background-color: #f5f8ff;
+  border-radius: 100px;
+}
+.deposit-card.template .deposit-card__bank-info {
+  width: 100%;
+}
+.deposit-card.template .deposit-card__bank-name {
+  width: 100%;
+  height: 24px;
+  background-color: #f5f8ff;
+  border-radius: 100px;
+}
+@media (max-width: 992px) {
+  .deposit-card.template .deposit-card__bank-name {
+    height: 20px;
+  }
+}
+.deposit-card.template .deposit-card__bank-country {
+  max-width: 96px;
+  width: 100%;
+  height: 18px;
+  margin-top: 10px;
+  background-color: #f5f8ff;
+  border-radius: 100px;
+}
+@media (max-width: 992px) {
+  .deposit-card.template .deposit-card__bank-country {
+    height: 10px;
+  }
+}
+.deposit-card.template .deposit-card__details {
+  gap: 6px;
+}
+.deposit-card.template .deposit-card__details-rate, .deposit-card.template .deposit-card__details-term, .deposit-card.template .deposit-card__details-amount {
+  width: 100%;
+  height: 24px;
+  background-color: #f5f8ff;
+  border-radius: 100px;
+}
+@media (max-width: 992px) {
+  .deposit-card.template .deposit-card__details-rate, .deposit-card.template .deposit-card__details-term, .deposit-card.template .deposit-card__details-amount {
+    min-height: 16px;
+  }
+}
+.deposit-card.template .deposit-card__button-primary {
+  color: #f5f8ff;
+  background-color: #f5f8ff;
+  border-color: #f5f8ff;
+}
+.deposit-card.template .deposit-card__button-favorites-hidden {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 32px;
+          flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: none;
+}
+.deposit-card.template .deposit-card__more-details-button-template {
+  height: 18px;
+  width: 94px;
+  color: #f5f8ff;
+  background: none;
+  background-color: #f5f8ff;
+  border-radius: 100px;
+  border: none;
+}
 
 .custom-select {
   position: relative;
@@ -479,6 +578,156 @@ figure {
   font-weight: 700;
   line-height: 20px;
   background: url(../assets/icons/selected-icon.svg) right 8px center no-repeat;
+}
+
+.language {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+.language .custom-select .select-selected {
+  position: relative;
+  padding-right: 56px;
+  color: #506392;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  background-position: right center;
+}
+.language .custom-select .select-selected:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  right: 28px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.language .custom-select .select-items {
+  max-height: 160px;
+  z-index: 200;
+}
+.language .custom-select[data-value=at] .select-selected::before {
+  background-image: url(../assets/countries/austria.svg);
+}
+.language .custom-select[data-value=be] .select-selected::before {
+  background-image: url(../assets/countries/belgium.svg);
+}
+.language .custom-select[data-value=en] .select-selected::before {
+  background-image: url(../assets/countries/britain.svg);
+}
+.language .custom-select[data-value=bg] .select-selected::before {
+  background-image: url(../assets/countries/bulgaria.svg);
+}
+.language .custom-select[data-value=hr] .select-selected::before {
+  background-image: url(../assets/countries/croatia.svg);
+}
+.language .custom-select[data-value=cy] .select-selected::before {
+  background-image: url(../assets/countries/cyprus.svg);
+}
+.language .custom-select[data-value=cz] .select-selected::before {
+  background-image: url(../assets/countries/czech.svg);
+}
+.language .custom-select[data-value=dk] .select-selected::before {
+  background-image: url(../assets/countries/denmark.svg);
+}
+.language .custom-select[data-value=ee] .select-selected::before {
+  background-image: url(../assets/countries/estonia.svg);
+}
+.language .custom-select[data-value=fl] .select-selected::before {
+  background-image: url(../assets/countries/finland.svg);
+}
+.language .custom-select[data-value=fr] .select-selected::before {
+  background-image: url(../assets/countries/france.svg);
+}
+.language .custom-select[data-value=de] .select-selected::before {
+  background-image: url(../assets/countries/germany.svg);
+}
+.language .custom-select[data-value=gr] .select-selected::before {
+  background-image: url(../assets/countries/greece.svg);
+}
+.language .custom-select[data-value=hu] .select-selected::before {
+  background-image: url(../assets/countries/hungary.svg);
+}
+.language .custom-select[data-value=ie] .select-selected::before {
+  background-image: url(../assets/countries/ireland.svg);
+}
+.language .custom-select[data-value=it] .select-selected::before {
+  background-image: url(../assets/countries/italy.svg);
+}
+.language .custom-select[data-value=lv] .select-selected::before {
+  background-image: url(../assets/countries/latvia.svg);
+}
+.language .custom-select[data-value=lt] .select-selected::before {
+  background-image: url(../assets/countries/lithuania.svg);
+}
+.language .custom-select[data-value=lu] .select-selected::before {
+  background-image: url(../assets/countries/luxembourg.svg);
+}
+.language .custom-select[data-value=mt] .select-selected::before {
+  background-image: url(../assets/countries/malta.svg);
+}
+.language .custom-select[data-value=nl] .select-selected::before {
+  background-image: url(../assets/countries/netherlands.svg);
+}
+.language .custom-select[data-value=pl] .select-selected::before {
+  background-image: url(../assets/countries/poland.svg);
+}
+.language .custom-select[data-value=pt] .select-selected::before {
+  background-image: url(../assets/countries/portugal.svg);
+}
+.language .custom-select[data-value=ro] .select-selected::before {
+  background-image: url(../assets/countries/romania.svg);
+}
+.language .custom-select[data-value=sk] .select-selected::before {
+  background-image: url(../assets/countries/slovakia.svg);
+}
+.language .custom-select[data-value=sl] .select-selected::before {
+  background-image: url(../assets/countries/slovenia.svg);
+}
+.language .custom-select[data-value=es] .select-selected::before {
+  background-image: url(../assets/countries/spain.svg);
+}
+.language .custom-select[data-value=se] .select-selected::before {
+  background-image: url(../assets/countries/sweden.svg);
+}
+.language .custom-select[data-value=ch] .select-selected::before {
+  background-image: url(../assets/countries/switzerland.svg);
+}
+
+.tag {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background: url(../assets/icons/question-icon.svg) center no-repeat;
+}
+.tag__text {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 20;
+  display: none;
+  width: 200px;
+  padding: 12px;
+  border-radius: 8px;
+  color: #7f8daf;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 16px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 8px 48px 0px rgba(0, 0, 102, 0.1);
+          box-shadow: 0px 8px 48px 0px rgba(0, 0, 102, 0.1);
+}
+.tag:hover .tag__text {
+  display: block;
 }
 
 .header {
@@ -597,6 +846,9 @@ figure {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 24px;
 }
 @media (max-width: 768px) {
@@ -720,6 +972,11 @@ figure {
   font-weight: 500;
   line-height: 20px;
 }
+@media (max-width: 576px) {
+  .footer__address {
+    padding-left: 0;
+  }
+}
 .footer__navigation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -810,6 +1067,23 @@ figure {
     margin-top: 52px;
   }
 }
+.footer .language {
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+@media (max-width: 992px) {
+  .footer .language {
+    position: static;
+    padding-left: 32px;
+    margin-top: 24px;
+  }
+}
+@media (max-width: 576px) {
+  .footer .language {
+    padding-left: 0;
+  }
+}
 
 .search {
   position: sticky;
@@ -827,6 +1101,7 @@ figure {
 }
 @media (max-width: 576px) {
   .search {
+    position: static;
     padding: 8px 20px;
   }
 }
@@ -852,6 +1127,15 @@ figure {
     background: none;
   }
 }
+@media (max-width: 576px) {
+  .search__bar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border: none;
+  }
+}
 .search__bar-select {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 20%;
@@ -872,35 +1156,22 @@ figure {
 }
 @media (max-width: 576px) {
   .search__bar-select {
-    display: none;
-  }
-}
-@media (max-width: 576px) {
-  .search__bar-select_residency {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 calc(100% - 50px);
-            flex: 1 1 calc(100% - 50px);
-    max-width: calc(100% - 50px);
-    display: block;
-    padding-left: 28px;
+    padding: 8px 24px;
+    border: 1px solid #e4e7f0;
+    border-radius: 50px;
   }
 }
 .search__bar-select_currency {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
-  min-width: 100px;
+  min-width: 110px;
 }
 .search__bar-label {
   color: #506392;
   font-size: 11px;
   font-weight: 500;
   line-height: 16px;
-}
-@media (max-width: 576px) {
-  .search__bar-label {
-    display: none;
-  }
 }
 .search__bar-label_mobile {
   display: none;
@@ -947,9 +1218,22 @@ figure {
     background-repeat: no-repeat;
   }
 }
+@media (max-width: 768px) and (max-width: 576px) {
+  .search__bar .btn {
+    width: auto;
+    height: auto;
+    padding: 13px 24px;
+    background-image: none;
+  }
+}
 @media (max-width: 768px) {
   .search__bar .btn span {
     display: none;
+  }
+}
+@media (max-width: 576px) {
+  .search__bar .btn span {
+    display: inline;
   }
 }
 .search__select .form-select {
@@ -1082,6 +1366,73 @@ figure {
 }
 .search__select-residency[data-value=ch]::before {
   background-image: url(../assets/countries/switzerland.svg);
+}
+.search__select-currency {
+  position: relative;
+  padding-left: 26px;
+}
+.search__select-currency:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.search__select-currency[data-value=eur]::before {
+  background-image: url(../assets/currency/eur.svg);
+}
+.search__select-currency[data-value=aud]::before {
+  background-image: url(../assets/currency/aud.svg);
+}
+.search__select-currency[data-value=bgn]::before {
+  background-image: url(../assets/currency/bgn.svg);
+}
+.search__select-currency[data-value=cad]::before {
+  background-image: url(../assets/currency/cad.svg);
+}
+.search__select-currency[data-value=chf]::before {
+  background-image: url(../assets/currency/chf.svg);
+}
+.search__select-currency[data-value=czk]::before {
+  background-image: url(../assets/currency/czk.svg);
+}
+.search__select-currency[data-value=dkk]::before {
+  background-image: url(../assets/currency/dkk.svg);
+}
+.search__select-currency[data-value=gbp]::before {
+  background-image: url(../assets/currency/gbp.svg);
+}
+.search__select-currency[data-value=huf]::before {
+  background-image: url(../assets/currency/huf.svg);
+}
+.search__select-currency[data-value=jpy]::before {
+  background-image: url(../assets/currency/jpy.svg);
+}
+.search__select-currency[data-value=nok]::before {
+  background-image: url(../assets/currency/nok.svg);
+}
+.search__select-currency[data-value=nzd]::before {
+  background-image: url(../assets/currency/nzd.svg);
+}
+.search__select-currency[data-value=pln]::before {
+  background-image: url(../assets/currency/pln.svg);
+}
+.search__select-currency[data-value=ron]::before {
+  background-image: url(../assets/currency/ron.svg);
+}
+.search__select-currency[data-value=sek]::before {
+  background-image: url(../assets/currency/sek.svg);
+}
+.search__select-currency[data-value=usd]::before {
+  background-image: url(../assets/currency/usd.svg);
 }
 
 .quick-search {
@@ -1258,6 +1609,13 @@ figure {
   letter-spacing: 0.3px;
 }
 .deposits__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
   margin: 0 0 36px;
   color: #506392;
   font-size: 15px;
@@ -1266,9 +1624,68 @@ figure {
   line-height: 20px;
   letter-spacing: 0.6px;
 }
-.deposits__description img {
+@media (max-width: 768px) {
+  .deposits__description {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+.deposits__description span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+}
+@media (max-width: 768px) {
+  .deposits__description span {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+  }
+}
+.deposits__description span img {
   width: 20px;
   height: auto;
+}
+.deposits__description .custom-select {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+.deposits__description .custom-select .select-selected {
+  position: relative;
+  padding-right: 20px;
+  color: #506392;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  background-position: right center;
+  background-size: 16px 16px;
+}
+.deposits__description .custom-select .select-selected:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  right: 28px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.deposits__description .custom-select .select-items {
+  left: auto;
+  right: 0;
+  padding: 12px 16px;
+  z-index: 200;
 }
 .deposits__buttons {
   display: -webkit-box;
@@ -1595,4 +2012,121 @@ figure {
   .subscription__button {
     min-width: 180px;
   }
+}
+
+.not-found {
+  padding: 154px 0;
+}
+.not-found__image {
+  margin-bottom: 16px;
+  text-align: center;
+}
+.not-found__image img {
+  width: 128px;
+  height: auto;
+}
+.not-found__title {
+  margin: 0;
+  color: #001855;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+}
+.not-found__description {
+  margin: 0;
+  color: #506392;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+}
+
+.notifications {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 300;
+  background-color: #ffffff;
+}
+.notifications .notification {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.notifications .notification__logo {
+  width: 20px;
+  height: auto;
+}
+.notifications .notification__text, .notifications .notification__text_sm {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  color: #506392;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+@media (max-width: 576px) {
+  .notifications .notification__text, .notifications .notification__text_sm {
+    display: none;
+  }
+}
+.notifications .notification__text b, .notifications .notification__text_sm b {
+  color: #001855;
+  font-weight: 700;
+}
+.notifications .notification__link {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin-right: 24px;
+  color: #326bff;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  text-decoration: none;
+}
+@media (max-width: 576px) {
+  .notifications .notification__link {
+    display: none;
+  }
+}
+.notifications .notification__text_sm {
+  display: none;
+}
+@media (max-width: 576px) {
+  .notifications .notification__text_sm {
+    display: inline;
+  }
+}
+@media (max-width: 576px) {
+  .notifications .notification__text_sm > * {
+    display: inline;
+  }
+}
+.notifications .notification__close {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: url(../assets/close-icon.svg) center no-repeat;
+  background-size: 20px 20px;
+  cursor: pointer;
 }
