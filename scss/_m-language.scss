@@ -1,0 +1,153 @@
+.language {
+  max-width: max-content;
+
+  & .custom-select {
+    & .select {
+      &-selected {
+        position: relative;
+        padding-right: 56px;
+        color: $grey800;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        background-position: right center;
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          bottom: 0;
+          right: 28px;
+          display: block;
+          width: 20px;
+          height: 20px;
+          background-position: center;
+          background-repeat: no-repeat;
+          transform: translateY(-50%);
+        }
+      }
+
+      &-items {
+        z-index: 200;
+      }
+    }
+
+
+    &[data-value='at'] .select-selected::before {
+      background-image: url(../assets/countries/austria.svg);
+    }
+
+    &[data-value='be'] .select-selected::before {
+      background-image: url(../assets/countries/belgium.svg);
+    }
+
+    &[data-value='en'] .select-selected::before {
+      background-image: url(../assets/countries/britain.svg);
+    }
+
+    &[data-value='bg'] .select-selected::before {
+      background-image: url(../assets/countries/bulgaria.svg);
+    }
+
+    &[data-value='hr'] .select-selected::before {
+      background-image: url(../assets/countries/croatia.svg);
+    }
+
+    &[data-value='cy'] .select-selected::before {
+      background-image: url(../assets/countries/cyprus.svg);
+    }
+
+    &[data-value='cz'] .select-selected::before {
+      background-image: url(../assets/countries/czech.svg);
+    }
+
+    &[data-value='dk'] .select-selected::before {
+      background-image: url(../assets/countries/denmark.svg);
+    }
+
+    &[data-value='ee'] .select-selected::before {
+      background-image: url(../assets/countries/estonia.svg);
+    }
+
+    &[data-value='fl'] .select-selected::before {
+      background-image: url(../assets/countries/finland.svg);
+    }
+
+    &[data-value='fr'] .select-selected::before {
+      background-image: url(../assets/countries/france.svg);
+    }
+
+    &[data-value='de'] .select-selected::before {
+      background-image: url(../assets/countries/germany.svg);
+    }
+
+    &[data-value='gr'] .select-selected::before {
+      background-image: url(../assets/countries/greece.svg);
+    }
+
+    &[data-value='hu'] .select-selected::before {
+      background-image: url(../assets/countries/hungary.svg);
+    }
+
+    &[data-value='ie'] .select-selected::before {
+      background-image: url(../assets/countries/ireland.svg);
+    }
+
+    &[data-value='it'] .select-selected::before {
+      background-image: url(../assets/countries/italy.svg);
+    }
+
+    &[data-value='lv'] .select-selected::before {
+      background-image: url(../assets/countries/latvia.svg);
+    }
+
+    &[data-value='lt'] .select-selected::before {
+      background-image: url(../assets/countries/lithuania.svg);
+    }
+
+    &[data-value='lu'] .select-selected::before {
+      background-image: url(../assets/countries/luxembourg.svg);
+    }
+
+    &[data-value='mt'] .select-selected::before {
+      background-image: url(../assets/countries/malta.svg);
+    }
+
+    &[data-value='nl'] .select-selected::before {
+      background-image: url(../assets/countries/netherlands.svg);
+    }
+
+    &[data-value='pl'] .select-selected::before {
+      background-image: url(../assets/countries/poland.svg);
+    }
+
+    &[data-value='pt'] .select-selected::before {
+      background-image: url(../assets/countries/portugal.svg);
+    }
+
+    &[data-value='ro'] .select-selected::before {
+      background-image: url(../assets/countries/romania.svg);
+    }
+
+    &[data-value='sk'] .select-selected::before {
+      background-image: url(../assets/countries/slovakia.svg);
+    }
+
+    &[data-value='sl'] .select-selected::before {
+      background-image: url(../assets/countries/slovenia.svg);
+    }
+
+    &[data-value='es'] .select-selected::before {
+      background-image: url(../assets/countries/spain.svg);
+    }
+
+    &[data-value='se'] .select-selected::before {
+      background-image: url(../assets/countries/sweden.svg);
+    }
+
+    &[data-value='ch'] .select-selected::before {
+      background-image: url(../assets/countries/switzerland.svg);
+    }
+  }
+}

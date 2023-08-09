@@ -64,6 +64,10 @@
     font-style: normal;
     font-weight: 500;
     line-height: 20px;
+    
+    @include mobile {
+      padding-left: 0;
+    }
   }
 
   &__navigation {
@@ -125,9 +129,25 @@
     font-weight: 500;
     line-height: 18px;
     border-top: 1px solid $grey200;
-    
+
     @include mobile {
       margin-top: 52px;
+    }
+  }
+
+  & .language {
+    position: absolute;
+    top: 0;
+    right: 20px;
+
+    @include laptop {
+      position: static;
+      padding-left: 32px;
+      margin-top: 24px;
+    }
+
+    @include mobile {
+      padding-left: 0;
     }
   }
 }
