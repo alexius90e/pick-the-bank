@@ -58,7 +58,7 @@
 
       &_currency {
         flex: 0 0 auto;
-        min-width: 100px;
+        min-width: 120px;
       }
 
       &_terms {
@@ -281,6 +281,89 @@
 
       &[data-value='ch']::before {
         background-image: url(../assets/countries/switzerland.svg);
+      }
+    }
+
+    &-currency {
+      position: relative;
+      padding-left: 26px;
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: translateY(-50%);
+      }
+
+      &[data-value='eur']::before {
+        background-image: url(../assets/currency/eur.svg);
+      }
+
+      &[data-value='aud']::before {
+        background-image: url(../assets/currency/aud.svg);
+      }
+
+      &[data-value='bgn']::before {
+        background-image: url(../assets/currency/bgn.svg);
+      }
+
+      &[data-value='cad']::before {
+        background-image: url(../assets/currency/cad.svg);
+      }
+
+      &[data-value='chf']::before {
+        background-image: url(../assets/currency/chf.svg);
+      }
+
+      &[data-value='czk']::before {
+        background-image: url(../assets/currency/czk.svg);
+      }
+
+      &[data-value='dkk']::before {
+        background-image: url(../assets/currency/dkk.svg);
+      }
+
+      &[data-value='gbp']::before {
+        background-image: url(../assets/currency/gbp.svg);
+      }
+
+      &[data-value='huf']::before {
+        background-image: url(../assets/currency/huf.svg);
+      }
+
+      &[data-value='jpy']::before {
+        background-image: url(../assets/currency/jpy.svg);
+      }
+
+      &[data-value='nok']::before {
+        background-image: url(../assets/currency/nok.svg);
+      }
+
+      &[data-value='nzd']::before {
+        background-image: url(../assets/currency/nzd.svg);
+      }
+
+      &[data-value='pln']::before {
+        background-image: url(../assets/currency/pln.svg);
+      }
+
+      &[data-value='ron']::before {
+        background-image: url(../assets/currency/ron.svg);
+      }
+
+      &[data-value='sek']::before {
+        background-image: url(../assets/currency/sek.svg);
+      }
+
+      &[data-value='usd']::before {
+        background-image: url(../assets/currency/usd.svg);
       }
     }
   }

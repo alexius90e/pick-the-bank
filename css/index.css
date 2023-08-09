@@ -889,7 +889,7 @@ figure {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
-  min-width: 100px;
+  min-width: 120px;
 }
 .search__bar-label {
   color: #506392;
@@ -1082,6 +1082,73 @@ figure {
 }
 .search__select-residency[data-value=ch]::before {
   background-image: url(../assets/countries/switzerland.svg);
+}
+.search__select-currency {
+  position: relative;
+  padding-left: 26px;
+}
+.search__select-currency:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.search__select-currency[data-value=eur]::before {
+  background-image: url(../assets/currency/eur.svg);
+}
+.search__select-currency[data-value=aud]::before {
+  background-image: url(../assets/currency/aud.svg);
+}
+.search__select-currency[data-value=bgn]::before {
+  background-image: url(../assets/currency/bgn.svg);
+}
+.search__select-currency[data-value=cad]::before {
+  background-image: url(../assets/currency/cad.svg);
+}
+.search__select-currency[data-value=chf]::before {
+  background-image: url(../assets/currency/chf.svg);
+}
+.search__select-currency[data-value=czk]::before {
+  background-image: url(../assets/currency/czk.svg);
+}
+.search__select-currency[data-value=dkk]::before {
+  background-image: url(../assets/currency/dkk.svg);
+}
+.search__select-currency[data-value=gbp]::before {
+  background-image: url(../assets/currency/gbp.svg);
+}
+.search__select-currency[data-value=huf]::before {
+  background-image: url(../assets/currency/huf.svg);
+}
+.search__select-currency[data-value=jpy]::before {
+  background-image: url(../assets/currency/jpy.svg);
+}
+.search__select-currency[data-value=nok]::before {
+  background-image: url(../assets/currency/nok.svg);
+}
+.search__select-currency[data-value=nzd]::before {
+  background-image: url(../assets/currency/nzd.svg);
+}
+.search__select-currency[data-value=pln]::before {
+  background-image: url(../assets/currency/pln.svg);
+}
+.search__select-currency[data-value=ron]::before {
+  background-image: url(../assets/currency/ron.svg);
+}
+.search__select-currency[data-value=sek]::before {
+  background-image: url(../assets/currency/sek.svg);
+}
+.search__select-currency[data-value=usd]::before {
+  background-image: url(../assets/currency/usd.svg);
 }
 
 .quick-search {
