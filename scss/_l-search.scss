@@ -57,7 +57,7 @@
 
       &_currency {
         flex: 0 0 auto;
-        min-width: 110px;
+        min-width: 115px;
       }
     }
 
@@ -282,6 +282,130 @@
       &[data-value='ch']::before {
         background-image: url(../assets/countries/switzerland.svg);
       }
+
+      &.custom-select .select-items .select {
+        &-item {
+          padding-left: 32px;
+          background-repeat: no-repeat;
+          background-position: left 4px center;
+
+          &_at {
+            background-image: url(../assets/countries/austria.svg);
+          }
+
+          &_be {
+            background-image: url(../assets/countries/belgium.svg);
+          }
+
+          &_gb {
+            background-image: url(../assets/countries/britain.svg);
+          }
+
+          &_bg {
+            background-image: url(../assets/countries/bulgaria.svg);
+          }
+
+          &_hr {
+            background-image: url(../assets/countries/croatia.svg);
+          }
+
+          &_cy {
+            background-image: url(../assets/countries/cyprus.svg);
+          }
+
+          &_cz {
+            background-image: url(../assets/countries/czech.svg);
+          }
+
+          &_dk {
+            background-image: url(../assets/countries/denmark.svg);
+          }
+
+          &_ee {
+            background-image: url(../assets/countries/estonia.svg);
+          }
+
+          &_fl {
+            background-image: url(../assets/countries/finland.svg);
+          }
+
+          &_fr {
+            background-image: url(../assets/countries/france.svg);
+          }
+
+          &_de {
+            background-image: url(../assets/countries/germany.svg);
+          }
+
+          &_gr {
+            background-image: url(../assets/countries/greece.svg);
+          }
+
+          &_hu {
+            background-image: url(../assets/countries/hungary.svg);
+          }
+
+          &_ie {
+            background-image: url(../assets/countries/ireland.svg);
+          }
+
+          &_it {
+            background-image: url(../assets/countries/italy.svg);
+          }
+
+          &_lv {
+            background-image: url(../assets/countries/latvia.svg);
+          }
+
+          &_lt {
+            background-image: url(../assets/countries/lithuania.svg);
+          }
+
+          &_lu {
+            background-image: url(../assets/countries/luxembourg.svg);
+          }
+
+          &_mt {
+            background-image: url(../assets/countries/malta.svg);
+          }
+
+          &_nl {
+            background-image: url(../assets/countries/netherlands.svg);
+          }
+
+          &_pl {
+            background-image: url(../assets/countries/poland.svg);
+          }
+
+          &_pt {
+            background-image: url(../assets/countries/portugal.svg);
+          }
+
+          &_ro {
+            background-image: url(../assets/countries/romania.svg);
+          }
+
+          &_sk {
+            background-image: url(../assets/countries/slovakia.svg);
+          }
+
+          &_sl {
+            background-image: url(../assets/countries/slovenia.svg);
+          }
+
+          &_es {
+            background-image: url(../assets/countries/spain.svg);
+          }
+
+          &_se {
+            background-image: url(../assets/countries/sweden.svg);
+          }
+
+          &_ch {
+            background-image: url(../assets/countries/switzerland.svg);
+          }
+        }
+      }
     }
 
     &-currency {
@@ -364,6 +488,78 @@
 
       &[data-value='usd']::before {
         background-image: url(../assets/currency/usd.svg);
+      }
+
+      &.custom-select .select-items .select {
+        &-item {
+          padding-left: 32px;
+          background-repeat: no-repeat;
+          background-position: left 4px center;
+
+          &_eur {
+            background-image: url(../assets/currency/eur.svg);
+          }
+    
+          &_aud {
+            background-image: url(../assets/currency/aud.svg);
+          }
+    
+          &_bgn {
+            background-image: url(../assets/currency/bgn.svg);
+          }
+    
+          &_cad {
+            background-image: url(../assets/currency/cad.svg);
+          }
+    
+          &_chf {
+            background-image: url(../assets/currency/chf.svg);
+          }
+    
+          &_czk {
+            background-image: url(../assets/currency/czk.svg);
+          }
+    
+          &_dkk {
+            background-image: url(../assets/currency/dkk.svg);
+          }
+    
+          &_gbp {
+            background-image: url(../assets/currency/gbp.svg);
+          }
+    
+          &_huf {
+            background-image: url(../assets/currency/huf.svg);
+          }
+    
+          &_jpy {
+            background-image: url(../assets/currency/jpy.svg);
+          }
+    
+          &_nok {
+            background-image: url(../assets/currency/nok.svg);
+          }
+    
+          &_nzd {
+            background-image: url(../assets/currency/nzd.svg);
+          }
+    
+          &_pln {
+            background-image: url(../assets/currency/pln.svg);
+          }
+    
+          &_ron {
+            background-image: url(../assets/currency/ron.svg);
+          }
+    
+          &_sek {
+            background-image: url(../assets/currency/sek.svg);
+          }
+    
+          &_usd {
+            background-image: url(../assets/currency/usd.svg);
+          }
+        }
       }
     }
   }

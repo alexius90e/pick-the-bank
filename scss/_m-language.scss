@@ -32,8 +32,25 @@
         max-height: 160px;
         z-index: 200;
       }
-    }
 
+      &-item {
+        padding-left: 32px;
+        background-repeat: no-repeat;
+        background-position: left 4px center;
+
+        &_en {
+          background-image: url(../assets/countries/britain.svg);
+        }
+
+        &_de {
+          background-image: url(../assets/countries/germany.svg);
+        }
+
+        &_nl {
+          background-image: url(../assets/countries/netherlands.svg);
+        }
+      }
+    }
 
     &[data-value='at'] .select-selected::before {
       background-image: url(../assets/countries/austria.svg);

@@ -1,5 +1,4 @@
-import '../js/notifications.js'
-
+import '../js/notifications.js';
 
 const residencySelect = document.getElementById('residencySelect');
 
@@ -19,6 +18,8 @@ customSelects.forEach((customSelect) => {
 
   [...options].forEach((option, index) => {
     const optionElem = document.createElement('div');
+    optionElem.classList.add('select-item');
+    optionElem.classList.add(`select-item_${option.value}`);
     optionElem.innerHTML = option.innerHTML;
     if (index === 0) optionElem.classList.add('same-as-selected');
     selectItems.append(optionElem);
