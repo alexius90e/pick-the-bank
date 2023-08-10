@@ -864,7 +864,8 @@ figure {
         -ms-flex-align: start;
             align-items: flex-start;
     gap: 8px;
-    height: calc(100vh - 60px);
+    min-height: calc(100vh - 60px);
+    height: 100%;
     padding: 20px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -872,6 +873,7 @@ figure {
     background-color: #ffffff;
     -webkit-transition: left ease-out 0.3s;
     transition: left ease-out 0.3s;
+    overflow: auto;
   }
 }
 @media (max-width: 768px) {
@@ -986,6 +988,8 @@ figure {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    padding-top: 160px;
+    padding-bottom: 40px;
   }
 }
 .header__auth_tablet {

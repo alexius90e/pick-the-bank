@@ -69,12 +69,14 @@
       justify-content: flex-start;
       align-items: flex-start;
       gap: 8px;
-      height: calc(100vh - 60px);
+      min-height: calc(100vh - 60px);
+      height: 100%;
       padding: 20px;
       box-sizing: border-box;
       border-top: 1px solid $grey200;
       background-color: $white;
       transition: left ease-out 0.3s;
+      overflow: auto;
     }
 
     &.active {
@@ -158,6 +160,8 @@
       width: 100%;
       align-items: flex-end;
       justify-content: center;
+      padding-top: 160px;
+      padding-bottom: 40px;
     }
 
     &_tablet {
