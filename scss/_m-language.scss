@@ -6,11 +6,12 @@
       &-selected {
         position: relative;
         padding-right: 56px;
+        padding-top: 4px;
         color: $grey800;
         font-size: 15px;
         font-style: normal;
         font-weight: 500;
-        line-height: 20px;
+        line-height: 15px;
         background-position: right center;
 
         &:before {
@@ -30,7 +31,11 @@
 
       &-items {
         max-height: 160px;
-        z-index: 200;
+        z-index: 1200;
+
+        &__header {
+          display: none;
+        }
       }
 
       &-item {

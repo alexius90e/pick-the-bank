@@ -64,7 +64,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: 20px;
-    
+
     @include mobile {
       padding-left: 0;
     }
@@ -148,6 +148,26 @@
 
     @include mobile {
       padding-left: 0;
+    }
+
+    & .custom-select {
+      & .select {
+        &-items {
+          left: auto;
+          right: 0;
+
+          @include laptop {
+            left: 0;
+            right: auto;
+          }
+
+          @include mobile {
+            top: auto;
+            left: 100%;
+            bottom: 0;
+          }
+        }
+      }
     }
   }
 }

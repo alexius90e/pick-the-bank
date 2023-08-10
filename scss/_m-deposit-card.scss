@@ -228,7 +228,7 @@
     letter-spacing: 0.1px;
     border-radius: 100px;
 
-    @include mobile {
+    @include laptop {
       padding: 2px 8px;
       font-size: 11px;
       line-height: 16px;

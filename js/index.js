@@ -1,23 +1,30 @@
 import '../js/notifications.js';
 import '../js/menu.js';
 
-const residencySelect = document.getElementById('residencySelect');
-
 const customSelects = document.querySelectorAll('.custom-select');
-const selectsCount = customSelects.length;
 
 customSelects.forEach((customSelect) => {
+  const isLanguageSelect = customSelect.parentNode.classList.contains('language');
   const selectElem = customSelect.querySelector('select');
   const options = selectElem.options;
-
   const selectSelected = document.createElement('div');
   selectSelected.classList.add('select-selected');
+
   selectSelected.innerHTML = `<span>${
-    selectElem.options[selectElem.selectedIndex].innerHTML
+    isLanguageSelect
+      ? selectElem.options[selectElem.selectedIndex].value.toUpperCase()
+      : selectElem.options[selectElem.selectedIndex].innerHTML
   }</span>`;
 
   const selectItems = document.createElement('div');
   selectItems.setAttribute('class', 'select-items select-hide');
+
+  if (isLanguageSelect) {
+    const header = document.createElement('div');
+    header.classList.add('select-items__header');
+    header.innerText = 'Language';
+    selectItems.append(header);
+  }
 
   [...options].forEach((option, index) => {
     const optionElem = document.createElement('div');
@@ -30,7 +37,7 @@ customSelects.forEach((customSelect) => {
     optionElem.addEventListener('click', () => {
       const sameAsSelected = selectItems.querySelector('.same-as-selected');
       const changeEvent = new Event('change');
-      selectSelected.innerHTML = option.innerHTML;
+      selectSelected.innerHTML = isLanguageSelect ? option.value.toUpperCase() : option.innerHTML;
       selectElem.value = option.value;
       customSelect.dataset.value = selectElem.value;
       sameAsSelected.classList.remove('same-as-selected');
