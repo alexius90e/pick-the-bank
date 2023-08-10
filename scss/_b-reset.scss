@@ -15,6 +15,13 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: $white;
   min-height: 1000px;
+
+  &.fixed {
+    @include tablet {
+      max-height: 100vh;
+      overflow: hidden;
+    }
+  }
 }
 
 a,

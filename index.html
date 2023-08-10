@@ -29,15 +29,9 @@
 
             <div class="logo"><a class="logo__link" href="./">PickTheBank</a></div>
 
-            <nav class="header__nav">
-              <a class="header__nav-link active" aria-current="page" href="#">Home</a>
-              <a class="header__nav-link" href="#">All deposits</a>
-              <a class="header__nav-link" href="#">Favourites</a>
-              <a class="header__nav-link" href="#">Blog</a>
-            </nav>
-
-            <nav class="header__auth">
+            <nav class="header__auth header__auth_tablet">
               <div class="language">
+                <div class="language__label">Language</div>
                 <div class="custom-select" data-value="en">
                   <select class="form-select">
                     <option value="en">EN</option>
@@ -50,6 +44,34 @@
               <a class="header__auth-link" href="#">Log In</a>
               <a class="header__auth-link header__auth-sign-up" href="#">Sign up</a>
             </nav>
+
+            <div class="header__menu">
+              <nav class="header__nav">
+                <a class="header__nav-link active" aria-current="page" href="#">Home</a>
+                <div class="header__nav-divider"></div>
+                <a class="header__nav-link" href="#">All deposits</a>
+                <div class="header__nav-divider"></div>
+                <a class="header__nav-link" href="#">Favourites</a>
+                <div class="header__nav-divider"></div>
+                <a class="header__nav-link" href="#">Blog</a>
+              </nav>
+
+              <nav class="header__auth">
+                <div class="language">
+                  <div class="language__label">Language</div>
+                  <div class="custom-select" data-value="en">
+                    <select class="form-select">
+                      <option value="en">EN</option>
+                      <option value="de">DE</option>
+                      <option value="nl">NL</option>
+                    </select>
+                  </div>
+                </div>
+
+                <a class="header__auth-link" href="#">Log In</a>
+                <a class="header__auth-link header__auth-sign-up" href="#">Sign up</a>
+              </nav>
+            </div>
           </div>
         </div>
       </div>
@@ -173,12 +195,14 @@
     <main class="main" id="main">
       <div class="container-fluid">
         <section class="protected">
-          <h6 class="protected__title">Read about deposit guarantee schemes</h6>
-          <p class="protected__description">
-            Savings <b>up to €100 000</b> with this icon are protected by the EU legislation
-          </p>
+          <a class="protected__link" href="#">
+            <h6 class="protected__title">Read about deposit guarantee schemes</h6>
+            <p class="protected__description">
+              Savings <b>up to €100 000</b> with this icon are protected by the EU legislation
+            </p>
 
-          <button class="protected__button"></button>
+            <button class="protected__button"></button>
+          </a>
         </section>
 
         <section class="deposits">
@@ -466,22 +490,24 @@
         </section>
 
         <section class="blog-card">
-          <figure class="blog-card__figure">
-            <img class="blog-card__image" src="./assets/germany.svg" alt="germany" />
-          </figure>
+          <a class="blog-card__link" href="#">
+            <figure class="blog-card__figure">
+              <img class="blog-card__image" src="./assets/germany.svg" alt="germany" />
+            </figure>
 
-          <div class="blog-card__info">
-            <h4 class="blog-card__title">Top interest rates in German banks - May 2023</h4>
-            <div class="blog-card__author">
-              <div class="blog-card__author-info">
-                <img class="blog-card__author-photo" src="./assets/avatar.png" alt="avatar" />
-                <span class="blog-card__author-name">Alexander Gromov</span>
+            <div class="blog-card__info">
+              <h4 class="blog-card__title">Top interest rates in German banks - May 2023</h4>
+              <div class="blog-card__author">
+                <div class="blog-card__author-info">
+                  <img class="blog-card__author-photo" src="./assets/avatar.png" alt="avatar" />
+                  <span class="blog-card__author-name">Alexander Gromov</span>
+                </div>
+                <div class="blog-card__author-description">Founder and CEO</div>
               </div>
-              <div class="blog-card__author-description">Founder and CEO</div>
             </div>
-          </div>
 
-          <button class="blog-card__button"></button>
+            <button class="blog-card__button"></button>
+          </a>
         </section>
 
         <section class="deposits">

@@ -1,21 +1,28 @@
 .blog-card {
-  display: flex;
-  align-items: center;
-  gap: 12px;
   margin: 16px 0 32px;
   padding: 16px 24px;
   border-radius: 12px;
   border: 4px solid $white;
   background: $blue50;
 
-  @include tablet {
-    gap: 8px;
+  @include mobile {
+    padding: 16px;
   }
 
-  @include mobile {
-    align-items: flex-start;
-    gap: 4px;
-    padding: 16px;
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+
+    @include tablet {
+      gap: 8px;
+    }
+
+    @include mobile {
+      align-items: flex-start;
+      gap: 4px;
+    }
   }
 
   &__figure {

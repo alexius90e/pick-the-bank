@@ -1,4 +1,5 @@
 import '../js/notifications.js';
+import '../js/menu.js';
 
 const residencySelect = document.getElementById('residencySelect');
 
@@ -11,7 +12,9 @@ customSelects.forEach((customSelect) => {
 
   const selectSelected = document.createElement('div');
   selectSelected.classList.add('select-selected');
-  selectSelected.innerHTML = selectElem.options[selectElem.selectedIndex].innerHTML;
+  selectSelected.innerHTML = `<span>${
+    selectElem.options[selectElem.selectedIndex].innerHTML
+  }</span>`;
 
   const selectItems = document.createElement('div');
   selectItems.setAttribute('class', 'select-items select-hide');
