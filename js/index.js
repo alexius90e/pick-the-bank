@@ -1,5 +1,5 @@
-import '../js/notifications.js'
-
+import '../js/notifications.js';
+import '../js/menu.js';
 
 const residencySelect = document.getElementById('residencySelect');
 
@@ -12,13 +12,17 @@ customSelects.forEach((customSelect) => {
 
   const selectSelected = document.createElement('div');
   selectSelected.classList.add('select-selected');
-  selectSelected.innerHTML = selectElem.options[selectElem.selectedIndex].innerHTML;
+  selectSelected.innerHTML = `<span>${
+    selectElem.options[selectElem.selectedIndex].innerHTML
+  }</span>`;
 
   const selectItems = document.createElement('div');
   selectItems.setAttribute('class', 'select-items select-hide');
 
   [...options].forEach((option, index) => {
     const optionElem = document.createElement('div');
+    optionElem.classList.add('select-item');
+    optionElem.classList.add(`select-item_${option.value}`);
     optionElem.innerHTML = option.innerHTML;
     if (index === 0) optionElem.classList.add('same-as-selected');
     selectItems.append(optionElem);
