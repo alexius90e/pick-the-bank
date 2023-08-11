@@ -142,6 +142,8 @@ figure {
           flex: 0 0 64px;
   width: 64px;
   height: 64px;
+  border-radius: 56px;
+  border: 1px solid #e4e7f0;
 }
 @media (max-width: 992px) {
   .deposit-card__bank-logo {
@@ -181,7 +183,10 @@ figure {
 }
 .deposit-card__bank-logo img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 56px;
 }
 .deposit-card__bank-name {
   color: #001855;
@@ -329,6 +334,34 @@ figure {
     padding: 13px 24px;
   }
 }
+.deposit-card__button-light {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  padding: 18px 35px;
+  color: #326bff;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  background-color: #eaf0ff;
+}
+@media (max-width: 992px) {
+  .deposit-card__button-light {
+    padding: 13px 24px;
+  }
+}
+.deposit-card__button-light:hover {
+  color: #326bff;
+  background-color: #dbe5ff;
+}
+.deposit-card__button-light:focus {
+  color: #326bff;
+  background-color: #dbe5ff;
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(50, 107, 255, 0.25);
+          box-shadow: 0 0 0 0.25rem rgba(50, 107, 255, 0.25);
+}
 .deposit-card__button-favorites {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 32px;
@@ -360,6 +393,7 @@ figure {
   line-height: 18px;
   letter-spacing: 0.1px;
   border-radius: 100px;
+  cursor: pointer;
 }
 @media (max-width: 992px) {
   .deposit-card__tag {
@@ -428,6 +462,31 @@ figure {
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
+}
+.deposit-card__more-details-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 16px;
+  margin-top: 24px;
+}
+.deposit-card__more-details-buttons .btn {
+  padding: 13px 24px;
+  color: #326bff;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+}
+.deposit-card__more-details-buttons .btn-light {
+  background-color: #f5f8ff;
+}
+.deposit-card__more-details-buttons .btn-light:focus {
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(50, 107, 255, 0.25);
+          box-shadow: 0 0 0 0.25rem rgba(50, 107, 255, 0.25);
 }
 .deposit-card.template .deposit-card__bank-logo {
   background-color: #f5f8ff;
@@ -741,27 +800,40 @@ figure {
 
 .tag {
   position: relative;
+  min-width: 20px;
   width: 20px;
   height: 20px;
   background: url(../assets/icons/question-icon.svg) center no-repeat;
 }
 .tag__text {
   position: absolute;
-  left: 0;
-  top: 100%;
+  left: -40px;
+  top: 103%;
   z-index: 20;
   display: none;
-  width: 200px;
+  max-height: 240px;
+  width: 480px;
   padding: 12px;
   border-radius: 8px;
-  color: #7f8daf;
-  font-size: 11px;
+  color: #001855;
+  font-size: 13px;
   font-style: normal;
-  font-weight: 300;
-  line-height: 16px;
+  font-weight: 500;
+  line-height: 18px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 8px 48px 0px rgba(0, 0, 102, 0.1);
           box-shadow: 0px 8px 48px 0px rgba(0, 0, 102, 0.1);
+  overflow: auto;
+}
+.tag__text::-webkit-scrollbar {
+  width: 6px;
+}
+.tag__text::-webkit-scrollbar-track {
+  background-color: #f5f6fa;
+}
+.tag__text::-webkit-scrollbar-thumb {
+  background-color: #e4e7f0;
+  border-radius: 55px;
 }
 .tag:hover .tag__text {
   display: block;
@@ -1019,7 +1091,10 @@ figure {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 24px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 16px;
 }
 .header__auth-link {
   display: inline-block;
@@ -1051,7 +1126,21 @@ figure {
     font-size: 13px;
     font-weight: 700;
     line-height: 18px;
+    background-color: #eaf0ff;
+    -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  }
+  .header__auth-link:hover {
+    color: #326bff;
     background-color: #dbe5ff;
+  }
+  .header__auth-link:focus {
+    color: #326bff;
+    background-color: #dbe5ff;
+    -webkit-box-shadow: 0 0 0 0.25rem rgba(50, 107, 255, 0.35);
+            box-shadow: 0 0 0 0.25rem rgba(50, 107, 255, 0.35);
   }
 }
 .header__auth-sign-up {
@@ -1062,6 +1151,16 @@ figure {
   .header__auth-sign-up {
     color: #ffffff;
     background-color: #326bff;
+  }
+  .header__auth-sign-up:hover {
+    background-color: #0b5ed7;
+  }
+  .header__auth-sign-up:focus {
+    color: #fff;
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+    -webkit-box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
+            box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
   }
 }
 @media (max-width: 576px) {
@@ -1147,6 +1246,7 @@ figure {
     position: relative;
     display: block;
     padding: 18px 20px;
+    border-bottom: 1px solid #e4e7f0;
     color: #001855;
     font-size: 18px;
     font-style: normal;
@@ -1473,6 +1573,11 @@ figure {
           flex-direction: column;
   padding-left: 28px;
 }
+@media (max-width: 992px) {
+  .search__bar-select {
+    padding-left: 18px;
+  }
+}
 @media (max-width: 768px) {
   .search__bar-select {
     padding-left: 20px;
@@ -1496,13 +1601,12 @@ figure {
   font-size: 11px;
   font-weight: 500;
   line-height: 16px;
-}
-.search__bar-label_mobile {
-  display: none;
-  word-wrap: break-word;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.search__bar-label_mobile {
+  display: none;
 }
 @media (max-width: 576px) {
   .search__bar-label_mobile {
@@ -1560,6 +1664,25 @@ figure {
     display: inline;
   }
 }
+@media (max-width: 992px) {
+  .search .custom-select .select-selected span {
+    display: block;
+    max-width: 74px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 768px) {
+  .search .custom-select .select-selected span {
+    max-width: 54px;
+  }
+}
+@media (max-width: 576px) {
+  .search .custom-select .select-selected span {
+    max-width: none;
+  }
+}
 .search__select .form-select {
   width: 100%;
   padding: 2px 4px;
@@ -1603,6 +1726,101 @@ figure {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+.search__select-residency.custom-select .select-selected {
+  overflow: hidden;
+}
+.search__select-residency.custom-select .select-item {
+  padding-left: 32px;
+  background-repeat: no-repeat;
+  background-position: left 4px center;
+}
+.search__select-residency.custom-select .select-item_at {
+  background-image: url(../assets/countries/austria.svg);
+}
+.search__select-residency.custom-select .select-item_be {
+  background-image: url(../assets/countries/belgium.svg);
+}
+.search__select-residency.custom-select .select-item_gb {
+  background-image: url(../assets/countries/britain.svg);
+}
+.search__select-residency.custom-select .select-item_bg {
+  background-image: url(../assets/countries/bulgaria.svg);
+}
+.search__select-residency.custom-select .select-item_hr {
+  background-image: url(../assets/countries/croatia.svg);
+}
+.search__select-residency.custom-select .select-item_cy {
+  background-image: url(../assets/countries/cyprus.svg);
+}
+.search__select-residency.custom-select .select-item_cz {
+  background-image: url(../assets/countries/czech.svg);
+}
+.search__select-residency.custom-select .select-item_dk {
+  background-image: url(../assets/countries/denmark.svg);
+}
+.search__select-residency.custom-select .select-item_ee {
+  background-image: url(../assets/countries/estonia.svg);
+}
+.search__select-residency.custom-select .select-item_fl {
+  background-image: url(../assets/countries/finland.svg);
+}
+.search__select-residency.custom-select .select-item_fr {
+  background-image: url(../assets/countries/france.svg);
+}
+.search__select-residency.custom-select .select-item_de {
+  background-image: url(../assets/countries/germany.svg);
+}
+.search__select-residency.custom-select .select-item_gr {
+  background-image: url(../assets/countries/greece.svg);
+}
+.search__select-residency.custom-select .select-item_hu {
+  background-image: url(../assets/countries/hungary.svg);
+}
+.search__select-residency.custom-select .select-item_ie {
+  background-image: url(../assets/countries/ireland.svg);
+}
+.search__select-residency.custom-select .select-item_it {
+  background-image: url(../assets/countries/italy.svg);
+}
+.search__select-residency.custom-select .select-item_lv {
+  background-image: url(../assets/countries/latvia.svg);
+}
+.search__select-residency.custom-select .select-item_lt {
+  background-image: url(../assets/countries/lithuania.svg);
+}
+.search__select-residency.custom-select .select-item_lu {
+  background-image: url(../assets/countries/luxembourg.svg);
+}
+.search__select-residency.custom-select .select-item_mt {
+  background-image: url(../assets/countries/malta.svg);
+}
+.search__select-residency.custom-select .select-item_nl {
+  background-image: url(../assets/countries/netherlands.svg);
+}
+.search__select-residency.custom-select .select-item_pl {
+  background-image: url(../assets/countries/poland.svg);
+}
+.search__select-residency.custom-select .select-item_pt {
+  background-image: url(../assets/countries/portugal.svg);
+}
+.search__select-residency.custom-select .select-item_ro {
+  background-image: url(../assets/countries/romania.svg);
+}
+.search__select-residency.custom-select .select-item_sk {
+  background-image: url(../assets/countries/slovakia.svg);
+}
+.search__select-residency.custom-select .select-item_sl {
+  background-image: url(../assets/countries/slovenia.svg);
+}
+.search__select-residency.custom-select .select-item_es {
+  background-image: url(../assets/countries/spain.svg);
+}
+.search__select-residency.custom-select .select-item_se {
+  background-image: url(../assets/countries/sweden.svg);
+}
+.search__select-residency.custom-select .select-item_ch {
+  background-image: url(../assets/countries/switzerland.svg);
 }
 .search__select-residency[data-value=at]::before {
   background-image: url(../assets/countries/austria.svg);
@@ -1689,98 +1907,6 @@ figure {
   background-image: url(../assets/countries/sweden.svg);
 }
 .search__select-residency[data-value=ch]::before {
-  background-image: url(../assets/countries/switzerland.svg);
-}
-.search__select-residency.custom-select .select-items .select-item {
-  padding-left: 32px;
-  background-repeat: no-repeat;
-  background-position: left 4px center;
-}
-.search__select-residency.custom-select .select-items .select-item_at {
-  background-image: url(../assets/countries/austria.svg);
-}
-.search__select-residency.custom-select .select-items .select-item_be {
-  background-image: url(../assets/countries/belgium.svg);
-}
-.search__select-residency.custom-select .select-items .select-item_gb {
-  background-image: url(../assets/countries/britain.svg);
-}
-.search__select-residency.custom-select .select-items .select-item_bg {
-  background-image: url(../assets/countries/bulgaria.svg);
-}
-.search__select-residency.custom-select .select-items .select-item_hr {
-  background-image: url(../assets/countries/croatia.svg);
-}
-.search__select-residency.custom-select .select-items .select-item_cy {
-  background-image: url(../assets/countries/cyprus.svg);
-}
-.search__select-residency.custom-select .select-items .select-item_cz {
-  background-image: url(../assets/countries/czech.svg);
-}
-.search__select-residency.custom-select .select-items .select-item_dk {
-  background-image: url(../assets/countries/denmark.svg);
-}
-.search__select-residency.custom-select .select-items .select-item_ee {
-  background-image: url(../assets/countries/estonia.svg);
-}
-.search__select-residency.custom-select .select-items .select-item_fl {
-  background-image: url(../assets/countries/finland.svg);
-}
-.search__select-residency.custom-select .select-items .select-item_fr {
-  background-image: url(../assets/countries/france.svg);
-}
-.search__select-residency.custom-select .select-items .select-item_de {
-  background-image: url(../assets/countries/germany.svg);
-}
-.search__select-residency.custom-select .select-items .select-item_gr {
-  background-image: url(../assets/countries/greece.svg);
-}
-.search__select-residency.custom-select .select-items .select-item_hu {
-  background-image: url(../assets/countries/hungary.svg);
-}
-.search__select-residency.custom-select .select-items .select-item_ie {
-  background-image: url(../assets/countries/ireland.svg);
-}
-.search__select-residency.custom-select .select-items .select-item_it {
-  background-image: url(../assets/countries/italy.svg);
-}
-.search__select-residency.custom-select .select-items .select-item_lv {
-  background-image: url(../assets/countries/latvia.svg);
-}
-.search__select-residency.custom-select .select-items .select-item_lt {
-  background-image: url(../assets/countries/lithuania.svg);
-}
-.search__select-residency.custom-select .select-items .select-item_lu {
-  background-image: url(../assets/countries/luxembourg.svg);
-}
-.search__select-residency.custom-select .select-items .select-item_mt {
-  background-image: url(../assets/countries/malta.svg);
-}
-.search__select-residency.custom-select .select-items .select-item_nl {
-  background-image: url(../assets/countries/netherlands.svg);
-}
-.search__select-residency.custom-select .select-items .select-item_pl {
-  background-image: url(../assets/countries/poland.svg);
-}
-.search__select-residency.custom-select .select-items .select-item_pt {
-  background-image: url(../assets/countries/portugal.svg);
-}
-.search__select-residency.custom-select .select-items .select-item_ro {
-  background-image: url(../assets/countries/romania.svg);
-}
-.search__select-residency.custom-select .select-items .select-item_sk {
-  background-image: url(../assets/countries/slovakia.svg);
-}
-.search__select-residency.custom-select .select-items .select-item_sl {
-  background-image: url(../assets/countries/slovenia.svg);
-}
-.search__select-residency.custom-select .select-items .select-item_es {
-  background-image: url(../assets/countries/spain.svg);
-}
-.search__select-residency.custom-select .select-items .select-item_se {
-  background-image: url(../assets/countries/sweden.svg);
-}
-.search__select-residency.custom-select .select-items .select-item_ch {
   background-image: url(../assets/countries/switzerland.svg);
 }
 .search__select-currency {

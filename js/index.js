@@ -37,7 +37,10 @@ customSelects.forEach((customSelect) => {
     optionElem.addEventListener('click', () => {
       const sameAsSelected = selectItems.querySelector('.same-as-selected');
       const changeEvent = new Event('change');
-      selectSelected.innerHTML = isLanguageSelect ? option.value.toUpperCase() : option.innerHTML;
+      // selectSelected.innerHTML = isLanguageSelect ? option.value.toUpperCase() : option.innerHTML;
+      selectSelected.innerHTML = `<span>${
+        isLanguageSelect ? option.value.toUpperCase() : option.innerHTML
+      }</span>`;
       selectElem.value = option.value;
       customSelect.dataset.value = selectElem.value;
       sameAsSelected.classList.remove('same-as-selected');
