@@ -10,6 +10,7 @@
   }
 
   &__info {
+    position: relative;
     display: flex;
     align-items: flex-start;
     gap: 24px;
@@ -19,13 +20,22 @@
     }
   }
 
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: inline-block;
+  }
+
   &__bank {
-    flex: 0 1 336px;
+    flex: 0 100 336px;
     display: flex;
     gap: 12px;
 
     @include laptop {
-      flex: 0 1 296px;
+      flex: 0 100 296px;
     }
 
     @include tablet {
@@ -175,13 +185,11 @@
   }
 
   &__buttons {
+    position: relative;
+    z-index: 5;
     flex: 0 0 208px;
     display: flex;
     gap: 16px;
-
-    @include laptop {
-      flex: 0 0 166px;
-    }
 
     @include tablet {
       display: none;
@@ -232,6 +240,7 @@
 
     &-favorites {
       flex: 0 0 32px;
+      min-width: 32px;
       width: 32px;
       height: 32px;
       border: none;

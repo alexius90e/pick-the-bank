@@ -83,6 +83,7 @@ figure {
   }
 }
 .deposit-card__info {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -96,10 +97,18 @@ figure {
     gap: 16px;
   }
 }
+.deposit-card__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: inline-block;
+}
 .deposit-card__bank {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 336px;
-          flex: 0 1 336px;
+      -ms-flex: 0 100 336px;
+          flex: 0 100 336px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -108,8 +117,8 @@ figure {
 @media (max-width: 992px) {
   .deposit-card__bank {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 296px;
-            flex: 0 1 296px;
+        -ms-flex: 0 100 296px;
+            flex: 0 100 296px;
   }
 }
 @media (max-width: 768px) {
@@ -298,6 +307,8 @@ figure {
   }
 }
 .deposit-card__buttons {
+  position: relative;
+  z-index: 5;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 208px;
           flex: 0 0 208px;
@@ -305,13 +316,6 @@ figure {
   display: -ms-flexbox;
   display: flex;
   gap: 16px;
-}
-@media (max-width: 992px) {
-  .deposit-card__buttons {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 166px;
-            flex: 0 0 166px;
-  }
 }
 @media (max-width: 768px) {
   .deposit-card__buttons {
@@ -366,6 +370,7 @@ figure {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 32px;
           flex: 0 0 32px;
+  min-width: 32px;
   width: 32px;
   height: 32px;
   border: none;
