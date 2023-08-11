@@ -180,7 +180,8 @@
 
     &-buttons {
       display: flex;
-      gap: 24px;
+      justify-content: center;
+      gap: 16px;
     }
 
     &-link {
@@ -206,7 +207,20 @@
         font-size: 13px;
         font-weight: 700;
         line-height: 18px;
-        background-color: $blue150;
+        background-color: $blue100;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+          border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+        &:hover {
+          color: $blue500;
+          background-color: $blue150;
+        }
+
+        &:focus {
+          color: $blue500;
+          background-color: $blue150;
+          box-shadow: 0 0 0 0.25rem rgba($color: $blue500, $alpha: 0.35);
+        }
       }
     }
 
@@ -217,6 +231,17 @@
       @include mobile {
         color: $white;
         background-color: $blue500;
+
+        &:hover {
+          background-color: #0b5ed7;
+        }
+
+        &:focus {
+          color: #fff;
+          background-color: #0b5ed7;
+          border-color: #0a58ca;
+          box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
+        }
       }
     }
 
@@ -291,6 +316,7 @@
                 position: relative;
                 display: block;
                 padding: 18px 20px;
+                border-bottom: 1px solid $grey200;
                 color: $blue900;
                 font-size: 18px;
                 font-style: normal;

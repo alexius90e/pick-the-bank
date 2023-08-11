@@ -1,25 +1,42 @@
 .tag {
   position: relative;
+  min-width: 20px;
   width: 20px;
   height: 20px;
   background: url(../assets/icons/question-icon.svg) center no-repeat;
 
   &__text {
     position: absolute;
-    left: 0;
-    top: 100%;
+    left: -40px;
+    top: 103%;
     z-index: 20;
     display: none;
-    width: 200px;
+    max-height: 240px;
+    width: 480px;
     padding: 12px;
     border-radius: 8px;
-    color: $grey600;
-    font-size: 11px;
+    color: $blue900;
+    font-size: 13px;
     font-style: normal;
-    font-weight: 300;
-    line-height: 16px;
+    font-weight: 500;
+    line-height: 18px;
     background-color: $white;
-    box-shadow: 0px 8px 48px 0px rgba(0, 0, 102, 0.10);
+    box-shadow: 0px 8px 48px 0px rgba(0, 0, 102, 0.1);
+    overflow: auto;
+
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    &::-webkit-scrollbar-track {
+      background-color: $grey100;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: $grey200;
+      border-radius: 55px;
+    }
   }
 
   &:hover .tag__text {
