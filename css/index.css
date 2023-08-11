@@ -671,7 +671,7 @@ figure {
 .language .custom-select .select-selected {
   position: relative;
   padding-right: 56px;
-  padding-top: 4px;
+  padding-top: 3px;
   color: #506392;
   font-size: 15px;
   font-style: normal;
@@ -1534,6 +1534,25 @@ figure {
     padding: 8px 20px;
   }
 }
+@media (max-width: 992px) {
+  .search .custom-select .select-selected span {
+    display: block;
+    max-width: 74px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 768px) {
+  .search .custom-select .select-selected span {
+    max-width: 48px;
+  }
+}
+@media (max-width: 576px) {
+  .search .custom-select .select-selected span {
+    max-width: none;
+  }
+}
 .search__bar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1566,6 +1585,7 @@ figure {
   }
 }
 .search__bar-select {
+  position: relative;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 20%;
           flex: 1 1 20%;
@@ -1576,23 +1596,53 @@ figure {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-left: 28px;
+  padding: 0 24px;
 }
 @media (max-width: 992px) {
   .search__bar-select {
-    padding-left: 18px;
+    padding: 0 18px;
   }
 }
 @media (max-width: 768px) {
   .search__bar-select {
-    padding-left: 20px;
+    padding: 0 10px;
   }
 }
 @media (max-width: 576px) {
   .search__bar-select {
+    position: static;
     padding: 8px 24px;
     border: 1px solid #e4e7f0;
     border-radius: 50px;
+  }
+}
+.search__bar-select::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  display: block;
+  width: 1px;
+  height: 32px;
+  background-color: #e4e7f0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+@media (max-width: 576px) {
+  .search__bar-select::after {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .search__bar-select_residency {
+    padding-left: 24px;
+    padding-right: 16px;
+  }
+}
+@media (max-width: 576px) {
+  .search__bar-select_residency {
+    padding-right: 24px;
   }
 }
 .search__bar-select_currency {
@@ -1600,6 +1650,37 @@ figure {
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
   min-width: 115px;
+}
+@media (max-width: 768px) {
+  .search__bar-select_currency .custom-select .select-selected span {
+    min-width: none;
+    max-width: 24px;
+  }
+}
+@media (max-width: 576px) {
+  .search__bar-select_currency .custom-select .select-selected span {
+    max-width: none;
+  }
+}
+@media (max-width: 768px) {
+  .search__bar-select_terms .custom-select .select-selected span {
+    min-width: none;
+    max-width: 32px;
+  }
+}
+@media (max-width: 576px) {
+  .search__bar-select_terms .custom-select .select-selected span {
+    max-width: none;
+  }
+}
+@media (max-width: 576px) {
+  .search__bar-select_type {
+    padding-right: 24px;
+  }
+}
+.search__bar-select_type::after {
+  content: "";
+  display: none;
 }
 .search__bar-label {
   color: #506392;
@@ -1668,51 +1749,6 @@ figure {
   .search__bar .btn span {
     display: inline;
   }
-}
-@media (max-width: 992px) {
-  .search .custom-select .select-selected span {
-    display: block;
-    max-width: 74px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
-@media (max-width: 768px) {
-  .search .custom-select .select-selected span {
-    max-width: 54px;
-  }
-}
-@media (max-width: 576px) {
-  .search .custom-select .select-selected span {
-    max-width: none;
-  }
-}
-.search__select .form-select {
-  width: 100%;
-  padding: 2px 4px;
-  padding-right: 24px;
-  color: #001855;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 20px;
-  border: none;
-  background-color: inherit;
-  background-position: right 4px center;
-  min-width: auto;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-@media (max-width: 576px) {
-  .search__select .form-select {
-    background: none;
-  }
-}
-.search__select .form-select:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
 }
 .search__select-residency {
   position: relative;
